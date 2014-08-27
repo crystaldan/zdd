@@ -1,0 +1,1621 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Welcome to deployer’s documentation! &mdash; deployer 1 documentation</title>
+    
+    <link rel="stylesheet" href="_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="top" title="deployer 1 documentation" href="#" />
+    <link rel="next" title="YAML Syntax" href="rst/YAMLSyntax.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="rst/YAMLSyntax.html" title="YAML Syntax"
+             accesskey="N">next</a> |</li>
+        <li><a href="#">deployer 1 documentation</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="welcome-to-deployer-s-documentation">
+<h1>Welcome to deployer&#8217;s documentation!<a class="headerlink" href="#welcome-to-deployer-s-documentation" title="Permalink to this headline">¶</a></h1>
+<p>Contents:</p>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="rst/YAMLSyntax.html">YAML Syntax</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="rst/YAMLSyntax.html#yaml-basics">YAML Basics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rst/YAMLSyntax.html#gotchas">Gotchas</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="rst/community.html">Community Information</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rst/developing.html">Developer Information</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="rst/developing_api.html">Python API</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="rst/developing_api.html#id1">Python API</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="rst/developing_api.html#detailed-api-example">Detailed API Example</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="rst/developing_inventory.html">Developing Dynamic Inventory Sources</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="rst/developing_inventory.html#script-conventions">Script Conventions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="rst/developing_inventory.html#tuning-the-external-inventory-script">Tuning the External Inventory Script</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="rst/developing_modules.html">Developing Modules</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="rst/developing_modules.html#tutorial">Tutorial</a></li>
+<li class="toctree-l3"><a class="reference internal" href="rst/developing_modules.html#testing-modules">Testing Modules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="rst/developing_modules.html#reading-input">Reading Input</a></li>
+<li class="toctree-l3"><a class="reference internal" href="rst/developing_modules.html#module-provided-facts">Module Provided &#8216;Facts&#8217;</a></li>
+<li class="toctree-l3"><a class="reference internal" href="rst/developing_modules.html#common-module-boilerplate">Common Module Boilerplate</a></li>
+<li class="toctree-l3"><a class="reference internal" href="rst/developing_modules.html#check-mode">Check Mode</a></li>
+<li class="toctree-l3"><a class="reference internal" href="rst/developing_modules.html#common-pitfalls">Common Pitfalls</a></li>
+<li class="toctree-l3"><a class="reference internal" href="rst/developing_modules.html#conventions-recommendations">Conventions/Recommendations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="rst/developing_modules.html#shorthand-vs-json">Shorthand Vs JSON</a></li>
+<li class="toctree-l3"><a class="reference internal" href="rst/developing_modules.html#documenting-your-module">Documenting Your Module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="rst/developing_modules.html#example">Example</a></li>
+<li class="toctree-l4"><a class="reference internal" href="rst/developing_modules.html#building-testing">Building &amp; Testing</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="rst/developing_modules.html#getting-your-module-into-core">Getting Your Module Into Core</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="rst/developing_plugins.html">Developing Plugins</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="rst/developing_plugins.html#connection-type-plugins">Connection Type Plugins</a></li>
+<li class="toctree-l3"><a class="reference internal" href="rst/developing_plugins.html#lookup-plugins">Lookup Plugins</a></li>
+<li class="toctree-l3"><a class="reference internal" href="rst/developing_plugins.html#vars-plugins">Vars Plugins</a></li>
+<li class="toctree-l3"><a class="reference internal" href="rst/developing_plugins.html#filter-plugins">Filter Plugins</a></li>
+<li class="toctree-l3"><a class="reference internal" href="rst/developing_plugins.html#callbacks">Callbacks</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="rst/developing_plugins.html#examples">Examples</a></li>
+<li class="toctree-l4"><a class="reference internal" href="rst/developing_plugins.html#configuring">Configuring</a></li>
+<li class="toctree-l4"><a class="reference internal" href="rst/developing_plugins.html#development">Development</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="rst/developing_plugins.html#distributing-plugins">Distributing Plugins</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="rst/developing_api.html">Python API</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="rst/developing_api.html#id1">Python API</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="rst/developing_api.html#detailed-api-example">Detailed API Example</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="rst/developing_inventory.html">Developing Dynamic Inventory Sources</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="rst/developing_inventory.html#script-conventions">Script Conventions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rst/developing_inventory.html#tuning-the-external-inventory-script">Tuning the External Inventory Script</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="rst/developing_modules.html">Developing Modules</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="rst/developing_modules.html#tutorial">Tutorial</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rst/developing_modules.html#testing-modules">Testing Modules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rst/developing_modules.html#reading-input">Reading Input</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rst/developing_modules.html#module-provided-facts">Module Provided &#8216;Facts&#8217;</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rst/developing_modules.html#common-module-boilerplate">Common Module Boilerplate</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rst/developing_modules.html#check-mode">Check Mode</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rst/developing_modules.html#common-pitfalls">Common Pitfalls</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rst/developing_modules.html#conventions-recommendations">Conventions/Recommendations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rst/developing_modules.html#shorthand-vs-json">Shorthand Vs JSON</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rst/developing_modules.html#documenting-your-module">Documenting Your Module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="rst/developing_modules.html#example">Example</a></li>
+<li class="toctree-l3"><a class="reference internal" href="rst/developing_modules.html#building-testing">Building &amp; Testing</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="rst/developing_modules.html#getting-your-module-into-core">Getting Your Module Into Core</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="rst/developing_plugins.html">Developing Plugins</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="rst/developing_plugins.html#connection-type-plugins">Connection Type Plugins</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rst/developing_plugins.html#lookup-plugins">Lookup Plugins</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rst/developing_plugins.html#vars-plugins">Vars Plugins</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rst/developing_plugins.html#filter-plugins">Filter Plugins</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rst/developing_plugins.html#callbacks">Callbacks</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="rst/developing_plugins.html#examples">Examples</a></li>
+<li class="toctree-l3"><a class="reference internal" href="rst/developing_plugins.html#configuring">Configuring</a></li>
+<li class="toctree-l3"><a class="reference internal" href="rst/developing_plugins.html#development">Development</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="rst/developing_plugins.html#distributing-plugins">Distributing Plugins</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="rst/faq.html">Frequently Asked Questions</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="rst/faq.html#how-do-i-handle-different-machines-needing-different-user-accounts-or-ports-to-log-in-with">How do I handle different machines needing different user accounts or ports to log in with?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rst/faq.html#how-do-i-get-ansible-to-reuse-connections-enable-kerberized-ssh-or-have-ansible-pay-attention-to-my-local-ssh-config-file">How do I get ansible to reuse connections, enable Kerberized SSH, or have Ansible pay attention to my local SSH config file?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rst/faq.html#how-do-i-speed-up-management-inside-ec2">How do I speed up management inside EC2?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rst/faq.html#how-do-i-handle-python-pathing-not-having-a-python-2-x-in-usr-bin-python-on-a-remote-machine">How do I handle python pathing not having a Python 2.X in /usr/bin/python on a remote machine?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rst/faq.html#what-is-the-best-way-to-make-content-reusable-redistributable">What is the best way to make content reusable/redistributable?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rst/faq.html#where-does-the-configuration-file-live-and-what-can-i-configure-in-it">Where does the configuration file live and what can I configure in it?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rst/faq.html#how-do-i-disable-cowsay">How do I disable cowsay?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rst/faq.html#how-do-i-see-a-list-of-all-of-the-ansible-variables">How do I see a list of all of the ansible_ variables?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rst/faq.html#how-do-i-loop-over-a-list-of-hosts-in-a-group-inside-of-a-template">How do I loop over a list of hosts in a group, inside of a template?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rst/faq.html#how-do-i-access-a-variable-name-programmatically">How do I access a variable name programmatically?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rst/faq.html#how-do-i-access-a-variable-of-the-first-host-in-a-group">How do I access a variable of the first host in a group?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rst/faq.html#how-do-i-copy-files-recursively-onto-a-target-host">How do I copy files recursively onto a target host?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rst/faq.html#how-do-i-access-shell-environment-variables">How do I access shell environment variables?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rst/faq.html#how-do-i-generate-crypted-passwords-for-the-user-module">How do I generate crypted passwords for the user module?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rst/faq.html#can-i-get-training-on-ansible-or-find-commercial-support">Can I get training on Ansible or find commercial support?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rst/faq.html#is-there-a-web-interface-rest-api-etc">Is there a web interface / REST API / etc?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rst/faq.html#how-do-i-submit-a-change-to-the-documentation">How do I submit a change to the documentation?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rst/faq.html#how-do-i-keep-secret-data-in-my-playbook">How do I keep secret data in my playbook?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rst/faq.html#i-don-t-see-my-question-here">I don&#8217;t see my question here</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="rst/galaxy.html">Ansible Galaxy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rst/glossary.html">Glossary</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="rst/glossary.html#action">Action</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rst/glossary.html#ad-hoc">Ad Hoc</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rst/glossary.html#async">Async</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rst/glossary.html#callback-plugin">Callback Plugin</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rst/glossary.html#check-mode">Check Mode</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rst/glossary.html#connection-type-connection-plugin">Connection Type, Connection Plugin</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rst/glossary.html#conditionals">Conditionals</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rst/glossary.html#diff-mode">Diff Mode</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rst/glossary.html#facts">Facts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rst/glossary.html#filter-plugin">Filter Plugin</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rst/glossary.html#forks">Forks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rst/glossary.html#gather-facts-boolean">Gather Facts (Boolean)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rst/glossary.html#globbing">Globbing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rst/glossary.html#group">Group</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rst/glossary.html#group-vars">Group Vars</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rst/glossary.html#handlers">Handlers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rst/glossary.html#host">Host</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rst/glossary.html#host-specifier">Host Specifier</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rst/glossary.html#host-vars">Host Vars</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rst/glossary.html#lazy-evaluation">Lazy Evaluation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rst/glossary.html#lookup-plugin">Lookup Plugin</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rst/glossary.html#multi-tier">Multi-Tier</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rst/glossary.html#idempotency">Idempotency</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rst/glossary.html#includes">Includes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rst/glossary.html#inventory">Inventory</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rst/glossary.html#inventory-script">Inventory Script</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rst/glossary.html#jinja2">Jinja2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rst/glossary.html#json">JSON</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rst/glossary.html#library">Library</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rst/glossary.html#limit-groups">Limit Groups</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rst/glossary.html#local-connection">Local Connection</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rst/glossary.html#local-action">Local Action</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rst/glossary.html#loops">Loops</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rst/glossary.html#modules">Modules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rst/glossary.html#notify">Notify</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rst/glossary.html#orchestration">Orchestration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rst/glossary.html#paramiko">paramiko</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rst/glossary.html#playbooks">Playbooks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rst/glossary.html#plays">Plays</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rst/glossary.html#pull-mode">Pull Mode</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rst/glossary.html#push-mode">Push Mode</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rst/glossary.html#register-variable">Register Variable</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rst/glossary.html#resource-model">Resource Model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rst/glossary.html#roles">Roles</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rst/glossary.html#rolling-update">Rolling Update</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rst/glossary.html#runner">Runner</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rst/glossary.html#serial">Serial</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rst/glossary.html#sudo">Sudo</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rst/glossary.html#ssh-native">SSH (Native)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rst/glossary.html#tags">Tags</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rst/glossary.html#tasks">Tasks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rst/glossary.html#templates">Templates</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rst/glossary.html#transport">Transport</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rst/glossary.html#when">When</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rst/glossary.html#van-halen">Van Halen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rst/glossary.html#vars-variables">Vars (Variables)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rst/glossary.html#yaml">YAML</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="rst/guide_aws.html">Amazon Web Services Guide</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="rst/guide_aws.html#introduction">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rst/guide_aws.html#provisioning">Provisioning</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rst/guide_aws.html#advanced-usage">Advanced Usage</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="rst/guide_aws.html#host-inventory">Host Inventory</a></li>
+<li class="toctree-l3"><a class="reference internal" href="rst/guide_aws.html#tags">Tags</a></li>
+<li class="toctree-l3"><a class="reference internal" href="rst/guide_aws.html#pull-configuration">Pull Configuration</a></li>
+<li class="toctree-l3"><a class="reference internal" href="rst/guide_aws.html#autoscaling-with-ansible-tower">Autoscaling with Ansible Tower</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="rst/guide_aws.html#use-cases">Use Cases</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="rst/guide_aws.html#example-1">Example 1</a></li>
+<li class="toctree-l3"><a class="reference internal" href="rst/guide_aws.html#example-2">Example 2</a></li>
+<li class="toctree-l3"><a class="reference internal" href="rst/guide_aws.html#example-3">Example 3</a></li>
+<li class="toctree-l3"><a class="reference internal" href="rst/guide_aws.html#example-4">Example 4</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="rst/guide_aws.html#pending-information">Pending Information</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="rst/guide_gce.html">Google Cloud Platform Guide</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="rst/guide_gce.html#introduction">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rst/guide_gce.html#credentials">Credentials</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="rst/guide_gce.html#calling-modules-by-passing-credentials">Calling Modules By Passing Credentials</a></li>
+<li class="toctree-l3"><a class="reference internal" href="rst/guide_gce.html#calling-modules-with-secrets-py">Calling Modules with secrets.py</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="rst/guide_gce.html#gce-dynamic-inventory">GCE Dynamic Inventory</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rst/guide_gce.html#use-cases">Use Cases</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="rst/guide_gce.html#create-an-instance">Create an instance</a></li>
+<li class="toctree-l3"><a class="reference internal" href="rst/guide_gce.html#configuring-instances-in-a-group">Configuring instances in a group</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="rst/guide_rax.html">Rackspace Cloud Guide</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="rst/guide_rax.html#introduction">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rst/guide_rax.html#credentials-file">Credentials File</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="rst/guide_rax.html#running-from-a-python-virtual-environment-optional">Running from a Python Virtual Environment (Optional)</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="rst/guide_rax.html#provisioning">Provisioning</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rst/guide_rax.html#host-inventory">Host Inventory</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="rst/guide_rax.html#rax-py">rax.py</a></li>
+<li class="toctree-l3"><a class="reference internal" href="rst/guide_rax.html#standard-inventory">Standard Inventory</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="rst/guide_rax.html#use-cases">Use Cases</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="rst/guide_rax.html#network-and-server">Network and Server</a></li>
+<li class="toctree-l3"><a class="reference internal" href="rst/guide_rax.html#complete-environment">Complete Environment</a></li>
+<li class="toctree-l3"><a class="reference internal" href="rst/guide_rax.html#rackconnect-and-managed-cloud">RackConnect and Managed Cloud</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="rst/guide_rax.html#using-a-control-machine">Using a Control Machine</a></li>
+<li class="toctree-l4"><a class="reference internal" href="rst/guide_rax.html#using-ansible-pull">Using Ansible Pull</a></li>
+<li class="toctree-l4"><a class="reference internal" href="rst/guide_rax.html#using-ansible-pull-with-xenstore">Using Ansible Pull with XenStore</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="rst/guide_rax.html#advanced-usage">Advanced Usage</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="rst/guide_rax.html#autoscaling-with-tower">Autoscaling with Tower</a></li>
+<li class="toctree-l3"><a class="reference internal" href="rst/guide_rax.html#orchestration-in-the-rackspace-cloud">Orchestration in the Rackspace Cloud</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="rst/guide_rolling_upgrade.html">Continuous Delivery and Rolling Upgrades</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="rst/guide_rolling_upgrade.html#introduction">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rst/guide_rolling_upgrade.html#site-deployment">Site Deployment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rst/guide_rolling_upgrade.html#reusable-content-roles">Reusable Content: Roles</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rst/guide_rolling_upgrade.html#configuration-group-variables">Configuration: Group Variables</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rst/guide_rolling_upgrade.html#the-rolling-upgrade">The Rolling Upgrade</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rst/guide_rolling_upgrade.html#managing-other-load-balancers">Managing Other Load Balancers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rst/guide_rolling_upgrade.html#continuous-delivery-end-to-end">Continuous Delivery End-To-End</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="rst/guide_vagrant.html">Using Vagrant and Ansible</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="rst/guide_vagrant.html#introduction">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rst/guide_vagrant.html#vagrant-setup">Vagrant Setup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rst/guide_vagrant.html#running-ansible-manually">Running Ansible Manually</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="rst/guides.html">Detailed Guides</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="rst/guide_aws.html">Amazon Web Services Guide</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="rst/guide_aws.html#introduction">Introduction</a></li>
+<li class="toctree-l3"><a class="reference internal" href="rst/guide_aws.html#provisioning">Provisioning</a></li>
+<li class="toctree-l3"><a class="reference internal" href="rst/guide_aws.html#advanced-usage">Advanced Usage</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="rst/guide_aws.html#host-inventory">Host Inventory</a></li>
+<li class="toctree-l4"><a class="reference internal" href="rst/guide_aws.html#tags">Tags</a></li>
+<li class="toctree-l4"><a class="reference internal" href="rst/guide_aws.html#pull-configuration">Pull Configuration</a></li>
+<li class="toctree-l4"><a class="reference internal" href="rst/guide_aws.html#autoscaling-with-ansible-tower">Autoscaling with Ansible Tower</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="rst/guide_aws.html#use-cases">Use Cases</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="rst/guide_aws.html#example-1">Example 1</a></li>
+<li class="toctree-l4"><a class="reference internal" href="rst/guide_aws.html#example-2">Example 2</a></li>
+<li class="toctree-l4"><a class="reference internal" href="rst/guide_aws.html#example-3">Example 3</a></li>
+<li class="toctree-l4"><a class="reference internal" href="rst/guide_aws.html#example-4">Example 4</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="rst/guide_aws.html#pending-information">Pending Information</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="rst/guide_rax.html">Rackspace Cloud Guide</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="rst/guide_rax.html#introduction">Introduction</a></li>
+<li class="toctree-l3"><a class="reference internal" href="rst/guide_rax.html#credentials-file">Credentials File</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="rst/guide_rax.html#running-from-a-python-virtual-environment-optional">Running from a Python Virtual Environment (Optional)</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="rst/guide_rax.html#provisioning">Provisioning</a></li>
+<li class="toctree-l3"><a class="reference internal" href="rst/guide_rax.html#host-inventory">Host Inventory</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="rst/guide_rax.html#rax-py">rax.py</a></li>
+<li class="toctree-l4"><a class="reference internal" href="rst/guide_rax.html#standard-inventory">Standard Inventory</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="rst/guide_rax.html#use-cases">Use Cases</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="rst/guide_rax.html#network-and-server">Network and Server</a></li>
+<li class="toctree-l4"><a class="reference internal" href="rst/guide_rax.html#complete-environment">Complete Environment</a></li>
+<li class="toctree-l4"><a class="reference internal" href="rst/guide_rax.html#rackconnect-and-managed-cloud">RackConnect and Managed Cloud</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="rst/guide_rax.html#using-a-control-machine">Using a Control Machine</a></li>
+<li class="toctree-l5"><a class="reference internal" href="rst/guide_rax.html#using-ansible-pull">Using Ansible Pull</a></li>
+<li class="toctree-l5"><a class="reference internal" href="rst/guide_rax.html#using-ansible-pull-with-xenstore">Using Ansible Pull with XenStore</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="rst/guide_rax.html#advanced-usage">Advanced Usage</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="rst/guide_rax.html#autoscaling-with-tower">Autoscaling with Tower</a></li>
+<li class="toctree-l4"><a class="reference internal" href="rst/guide_rax.html#orchestration-in-the-rackspace-cloud">Orchestration in the Rackspace Cloud</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="rst/guide_gce.html">Google Cloud Platform Guide</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="rst/guide_gce.html#introduction">Introduction</a></li>
+<li class="toctree-l3"><a class="reference internal" href="rst/guide_gce.html#credentials">Credentials</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="rst/guide_gce.html#calling-modules-by-passing-credentials">Calling Modules By Passing Credentials</a></li>
+<li class="toctree-l4"><a class="reference internal" href="rst/guide_gce.html#calling-modules-with-secrets-py">Calling Modules with secrets.py</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="rst/guide_gce.html#gce-dynamic-inventory">GCE Dynamic Inventory</a></li>
+<li class="toctree-l3"><a class="reference internal" href="rst/guide_gce.html#use-cases">Use Cases</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="rst/guide_gce.html#create-an-instance">Create an instance</a></li>
+<li class="toctree-l4"><a class="reference internal" href="rst/guide_gce.html#configuring-instances-in-a-group">Configuring instances in a group</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="rst/guide_vagrant.html">Using Vagrant and Ansible</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="rst/guide_vagrant.html#introduction">Introduction</a></li>
+<li class="toctree-l3"><a class="reference internal" href="rst/guide_vagrant.html#vagrant-setup">Vagrant Setup</a></li>
+<li class="toctree-l3"><a class="reference internal" href="rst/guide_vagrant.html#running-ansible-manually">Running Ansible Manually</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="rst/guide_rolling_upgrade.html">Continuous Delivery and Rolling Upgrades</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="rst/guide_rolling_upgrade.html#introduction">Introduction</a></li>
+<li class="toctree-l3"><a class="reference internal" href="rst/guide_rolling_upgrade.html#site-deployment">Site Deployment</a></li>
+<li class="toctree-l3"><a class="reference internal" href="rst/guide_rolling_upgrade.html#reusable-content-roles">Reusable Content: Roles</a></li>
+<li class="toctree-l3"><a class="reference internal" href="rst/guide_rolling_upgrade.html#configuration-group-variables">Configuration: Group Variables</a></li>
+<li class="toctree-l3"><a class="reference internal" href="rst/guide_rolling_upgrade.html#the-rolling-upgrade">The Rolling Upgrade</a></li>
+<li class="toctree-l3"><a class="reference internal" href="rst/guide_rolling_upgrade.html#managing-other-load-balancers">Managing Other Load Balancers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="rst/guide_rolling_upgrade.html#continuous-delivery-end-to-end">Continuous Delivery End-To-End</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="rst/test_strategies.html">Testing Strategies</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="rst/test_strategies.html#integrating-testing-with-ansible-playbooks">Integrating Testing With Ansible Playbooks</a></li>
+<li class="toctree-l3"><a class="reference internal" href="rst/test_strategies.html#the-right-level-of-testing">The Right Level of Testing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="rst/test_strategies.html#check-mode-as-a-drift-test">Check Mode As A Drift Test</a></li>
+<li class="toctree-l3"><a class="reference internal" href="rst/test_strategies.html#modules-that-are-useful-for-testing">Modules That Are Useful for Testing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="rst/test_strategies.html#testing-lifecycle">Testing Lifecycle</a></li>
+<li class="toctree-l3"><a class="reference internal" href="rst/test_strategies.html#integrating-testing-with-rolling-updates">Integrating Testing With Rolling Updates</a></li>
+<li class="toctree-l3"><a class="reference internal" href="rst/test_strategies.html#achieving-continous-deployment">Achieving Continous Deployment</a></li>
+<li class="toctree-l3"><a class="reference internal" href="rst/test_strategies.html#conclusion">Conclusion</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="rst/guru.html">Ansible Guru</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rst/index.html">Ansible Documentation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="rst/index.html#about-ansible">About Ansible</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="rst/intro.html">Introduction</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="rst/intro_installation.html">Installation</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="rst/intro_installation.html#getting-ansible">Getting Ansible</a></li>
+<li class="toctree-l5"><a class="reference internal" href="rst/intro_installation.html#basics-what-will-be-installed">Basics / What Will Be Installed</a></li>
+<li class="toctree-l5"><a class="reference internal" href="rst/intro_installation.html#what-version-to-pick">What Version To Pick?</a></li>
+<li class="toctree-l5"><a class="reference internal" href="rst/intro_installation.html#control-machine-requirements">Control Machine Requirements</a></li>
+<li class="toctree-l5"><a class="reference internal" href="rst/intro_installation.html#managed-node-requirements">Managed Node Requirements</a></li>
+<li class="toctree-l5"><a class="reference internal" href="rst/intro_installation.html#installing-the-control-machine">Installing the Control Machine</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="rst/intro_installation.html#running-from-source">Running From Source</a></li>
+<li class="toctree-l6"><a class="reference internal" href="rst/intro_installation.html#latest-release-via-yum">Latest Release Via Yum</a></li>
+<li class="toctree-l6"><a class="reference internal" href="rst/intro_installation.html#latest-releases-via-apt-ubuntu">Latest Releases Via Apt (Ubuntu)</a></li>
+<li class="toctree-l6"><a class="reference internal" href="rst/intro_installation.html#latest-releases-via-pkg-freebsd">Latest Releases Via pkg (FreeBSD)</a></li>
+<li class="toctree-l6"><a class="reference internal" href="rst/intro_installation.html#latest-releases-via-homebrew-mac-osx">Latest Releases Via Homebrew (Mac OSX)</a></li>
+<li class="toctree-l6"><a class="reference internal" href="rst/intro_installation.html#latest-releases-via-pip">Latest Releases Via Pip</a></li>
+<li class="toctree-l6"><a class="reference internal" href="rst/intro_installation.html#tarballs-of-tagged-releases">Tarballs of Tagged Releases</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="rst/intro_getting_started.html">Getting Started</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="rst/intro_getting_started.html#foreword">Foreword</a></li>
+<li class="toctree-l5"><a class="reference internal" href="rst/intro_getting_started.html#remote-connection-information">Remote Connection Information</a></li>
+<li class="toctree-l5"><a class="reference internal" href="rst/intro_getting_started.html#your-first-commands">Your first commands</a></li>
+<li class="toctree-l5"><a class="reference internal" href="rst/intro_getting_started.html#host-key-checking">Host Key Checking</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="rst/intro_inventory.html">Inventory</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="rst/intro_inventory.html#hosts-and-groups">Hosts and Groups</a></li>
+<li class="toctree-l5"><a class="reference internal" href="rst/intro_inventory.html#host-variables">Host Variables</a></li>
+<li class="toctree-l5"><a class="reference internal" href="rst/intro_inventory.html#group-variables">Group Variables</a></li>
+<li class="toctree-l5"><a class="reference internal" href="rst/intro_inventory.html#groups-of-groups-and-group-variables">Groups of Groups, and Group Variables</a></li>
+<li class="toctree-l5"><a class="reference internal" href="rst/intro_inventory.html#splitting-out-host-and-group-specific-data">Splitting Out Host and Group Specific Data</a></li>
+<li class="toctree-l5"><a class="reference internal" href="rst/intro_inventory.html#list-of-behavioral-inventory-parameters">List of Behavioral Inventory Parameters</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="rst/intro_dynamic_inventory.html">Dynamic Inventory</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="rst/intro_dynamic_inventory.html#example-the-cobbler-external-inventory-script">Example: The Cobbler External Inventory Script</a></li>
+<li class="toctree-l5"><a class="reference internal" href="rst/intro_dynamic_inventory.html#example-aws-ec2-external-inventory-script">Example: AWS EC2 External Inventory Script</a></li>
+<li class="toctree-l5"><a class="reference internal" href="rst/intro_dynamic_inventory.html#other-inventory-scripts">Other inventory scripts</a></li>
+<li class="toctree-l5"><a class="reference internal" href="rst/intro_dynamic_inventory.html#using-multiple-inventory-sources">Using Multiple Inventory Sources</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="rst/intro_patterns.html">Patterns</a></li>
+<li class="toctree-l4"><a class="reference internal" href="rst/intro_adhoc.html">Introduction To Ad-Hoc Commands</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="rst/intro_adhoc.html#parallelism-and-shell-commands">Parallelism and Shell Commands</a></li>
+<li class="toctree-l5"><a class="reference internal" href="rst/intro_adhoc.html#file-transfer">File Transfer</a></li>
+<li class="toctree-l5"><a class="reference internal" href="rst/intro_adhoc.html#managing-packages">Managing Packages</a></li>
+<li class="toctree-l5"><a class="reference internal" href="rst/intro_adhoc.html#users-and-groups">Users and Groups</a></li>
+<li class="toctree-l5"><a class="reference internal" href="rst/intro_adhoc.html#deploying-from-source-control">Deploying From Source Control</a></li>
+<li class="toctree-l5"><a class="reference internal" href="rst/intro_adhoc.html#managing-services">Managing Services</a></li>
+<li class="toctree-l5"><a class="reference internal" href="rst/intro_adhoc.html#time-limited-background-operations">Time Limited Background Operations</a></li>
+<li class="toctree-l5"><a class="reference internal" href="rst/intro_adhoc.html#gathering-facts">Gathering Facts</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="rst/intro_configuration.html">The Ansible Configuration File</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="rst/intro_configuration.html#getting-the-latest-configuration">Getting the latest configuration</a></li>
+<li class="toctree-l5"><a class="reference internal" href="rst/intro_configuration.html#environmental-configuration">Environmental configuration</a></li>
+<li class="toctree-l5"><a class="reference internal" href="rst/intro_configuration.html#explanation-of-values-by-section">Explanation of values by section</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="rst/intro_configuration.html#general-defaults">General defaults</a><ul>
+<li class="toctree-l7"><a class="reference internal" href="rst/intro_configuration.html#action-plugins">action_plugins</a></li>
+<li class="toctree-l7"><a class="reference internal" href="rst/intro_configuration.html#ansible-managed">ansible_managed</a></li>
+<li class="toctree-l7"><a class="reference internal" href="rst/intro_configuration.html#ask-pass">ask_pass</a></li>
+<li class="toctree-l7"><a class="reference internal" href="rst/intro_configuration.html#ask-sudo-pass">ask_sudo_pass</a></li>
+<li class="toctree-l7"><a class="reference internal" href="rst/intro_configuration.html#callback-plugins">callback_plugins</a></li>
+<li class="toctree-l7"><a class="reference internal" href="rst/intro_configuration.html#connection-plugins">connection_plugins</a></li>
+<li class="toctree-l7"><a class="reference internal" href="rst/intro_configuration.html#deprecation-warnings">deprecation_warnings</a></li>
+<li class="toctree-l7"><a class="reference internal" href="rst/intro_configuration.html#display-skipped-hosts">display_skipped_hosts</a></li>
+<li class="toctree-l7"><a class="reference internal" href="rst/intro_configuration.html#error-on-undefined-vars">error_on_undefined_vars</a></li>
+<li class="toctree-l7"><a class="reference internal" href="rst/intro_configuration.html#executable">executable</a></li>
+<li class="toctree-l7"><a class="reference internal" href="rst/intro_configuration.html#filter-plugins">filter_plugins</a></li>
+<li class="toctree-l7"><a class="reference internal" href="rst/intro_configuration.html#forks">forks</a></li>
+<li class="toctree-l7"><a class="reference internal" href="rst/intro_configuration.html#gathering">gathering</a></li>
+<li class="toctree-l7"><a class="reference internal" href="rst/intro_configuration.html#hash-behaviour">hash_behaviour</a></li>
+<li class="toctree-l7"><a class="reference internal" href="rst/intro_configuration.html#hostfile">hostfile</a></li>
+<li class="toctree-l7"><a class="reference internal" href="rst/intro_configuration.html#host-key-checking">host_key_checking</a></li>
+<li class="toctree-l7"><a class="reference internal" href="rst/intro_configuration.html#jinja2-extensions">jinja2_extensions</a></li>
+<li class="toctree-l7"><a class="reference internal" href="rst/intro_configuration.html#legacy-playbook-variables">legacy_playbook_variables</a></li>
+<li class="toctree-l7"><a class="reference internal" href="rst/intro_configuration.html#library">library</a></li>
+<li class="toctree-l7"><a class="reference internal" href="rst/intro_configuration.html#log-path">log_path</a></li>
+<li class="toctree-l7"><a class="reference internal" href="rst/intro_configuration.html#lookup-plugins">lookup_plugins</a></li>
+<li class="toctree-l7"><a class="reference internal" href="rst/intro_configuration.html#module-lang">module_lang</a></li>
+<li class="toctree-l7"><a class="reference internal" href="rst/intro_configuration.html#module-name">module_name</a></li>
+<li class="toctree-l7"><a class="reference internal" href="rst/intro_configuration.html#nocolor">nocolor</a></li>
+<li class="toctree-l7"><a class="reference internal" href="rst/intro_configuration.html#nocows">nocows</a></li>
+<li class="toctree-l7"><a class="reference internal" href="rst/intro_configuration.html#pattern">pattern</a></li>
+<li class="toctree-l7"><a class="reference internal" href="rst/intro_configuration.html#poll-interval">poll_interval</a></li>
+<li class="toctree-l7"><a class="reference internal" href="rst/intro_configuration.html#private-key-file">private_key_file</a></li>
+<li class="toctree-l7"><a class="reference internal" href="rst/intro_configuration.html#remote-port">remote_port</a></li>
+<li class="toctree-l7"><a class="reference internal" href="rst/intro_configuration.html#remote-tmp">remote_tmp</a></li>
+<li class="toctree-l7"><a class="reference internal" href="rst/intro_configuration.html#remote-user">remote_user</a></li>
+<li class="toctree-l7"><a class="reference internal" href="rst/intro_configuration.html#roles-path">roles_path</a></li>
+<li class="toctree-l7"><a class="reference internal" href="rst/intro_configuration.html#sudo-exe">sudo_exe</a></li>
+<li class="toctree-l7"><a class="reference internal" href="rst/intro_configuration.html#sudo-flags">sudo_flags</a></li>
+<li class="toctree-l7"><a class="reference internal" href="rst/intro_configuration.html#sudo-user">sudo_user</a></li>
+<li class="toctree-l7"><a class="reference internal" href="rst/intro_configuration.html#system-warnings">system_warnings</a></li>
+<li class="toctree-l7"><a class="reference internal" href="rst/intro_configuration.html#timeout">timeout</a></li>
+<li class="toctree-l7"><a class="reference internal" href="rst/intro_configuration.html#transport">transport</a></li>
+<li class="toctree-l7"><a class="reference internal" href="rst/intro_configuration.html#vars-plugins">vars_plugins</a></li>
+</ul>
+</li>
+<li class="toctree-l6"><a class="reference internal" href="rst/intro_configuration.html#paramiko-specific-settings">Paramiko Specific Settings</a><ul>
+<li class="toctree-l7"><a class="reference internal" href="rst/intro_configuration.html#record-host-keys">record_host_keys</a></li>
+</ul>
+</li>
+<li class="toctree-l6"><a class="reference internal" href="rst/intro_configuration.html#openssh-specific-settings">OpenSSH Specific Settings</a><ul>
+<li class="toctree-l7"><a class="reference internal" href="rst/intro_configuration.html#ssh-args">ssh_args</a></li>
+<li class="toctree-l7"><a class="reference internal" href="rst/intro_configuration.html#control-path">control_path</a></li>
+<li class="toctree-l7"><a class="reference internal" href="rst/intro_configuration.html#scp-if-ssh">scp_if_ssh</a></li>
+<li class="toctree-l7"><a class="reference internal" href="rst/intro_configuration.html#pipelining">pipelining</a></li>
+</ul>
+</li>
+<li class="toctree-l6"><a class="reference internal" href="rst/intro_configuration.html#accelerate-mode-settings">Accelerate Mode Settings</a><ul>
+<li class="toctree-l7"><a class="reference internal" href="rst/intro_configuration.html#accelerate-port">accelerate_port</a></li>
+<li class="toctree-l7"><a class="reference internal" href="rst/intro_configuration.html#accelerate-timeout">accelerate_timeout</a></li>
+<li class="toctree-l7"><a class="reference internal" href="rst/intro_configuration.html#accelerate-connect-timeout">accelerate_connect_timeout</a></li>
+<li class="toctree-l7"><a class="reference internal" href="rst/intro_configuration.html#accelerate-daemon-timeout">accelerate_daemon_timeout</a></li>
+<li class="toctree-l7"><a class="reference internal" href="rst/intro_configuration.html#accelerate-multi-key">accelerate_multi_key</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="rst/intro_windows.html">Windows Support</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="rst/intro_windows.html#windows-how-does-it-work">Windows: How Does It Work</a></li>
+<li class="toctree-l5"><a class="reference internal" href="rst/intro_windows.html#installing-on-the-control-machine">Installing on the Control Machine</a></li>
+<li class="toctree-l5"><a class="reference internal" href="rst/intro_windows.html#inventory">Inventory</a></li>
+<li class="toctree-l5"><a class="reference internal" href="rst/intro_windows.html#windows-system-prep">Windows System Prep</a></li>
+<li class="toctree-l5"><a class="reference internal" href="rst/intro_windows.html#getting-to-powershell-3-0-or-higher">Getting to Powershell 3.0 or higher</a></li>
+<li class="toctree-l5"><a class="reference internal" href="rst/intro_windows.html#what-modules-are-available">What modules are available</a></li>
+<li class="toctree-l5"><a class="reference internal" href="rst/intro_windows.html#developers-supported-modules-and-how-it-works">Developers: Supported modules and how it works</a></li>
+<li class="toctree-l5"><a class="reference internal" href="rst/intro_windows.html#reminder-you-must-have-a-linux-control-machine">Reminder: You Must Have a Linux Control Machine</a></li>
+<li class="toctree-l5"><a class="reference internal" href="rst/intro_windows.html#windows-facts">Windows Facts</a></li>
+<li class="toctree-l5"><a class="reference internal" href="rst/intro_windows.html#windows-playbook-examples">Windows Playbook Examples</a></li>
+<li class="toctree-l5"><a class="reference internal" href="rst/intro_windows.html#windows-contributions">Windows Contributions</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="rst/quickstart.html">Quickstart Video</a></li>
+<li class="toctree-l3"><a class="reference internal" href="rst/playbooks.html">Playbooks</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="rst/playbooks_intro.html">Intro to Playbooks</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="rst/playbooks_intro.html#about-playbooks">About Playbooks</a></li>
+<li class="toctree-l5"><a class="reference internal" href="rst/playbooks_intro.html#playbook-language-example">Playbook Language Example</a></li>
+<li class="toctree-l5"><a class="reference internal" href="rst/playbooks_intro.html#basics">Basics</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="rst/playbooks_intro.html#hosts-and-users">Hosts and Users</a></li>
+<li class="toctree-l6"><a class="reference internal" href="rst/playbooks_intro.html#tasks-list">Tasks list</a></li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="rst/playbooks_intro.html#action-shorthand">Action Shorthand</a></li>
+<li class="toctree-l5"><a class="reference internal" href="rst/playbooks_intro.html#handlers-running-operations-on-change">Handlers: Running Operations On Change</a></li>
+<li class="toctree-l5"><a class="reference internal" href="rst/playbooks_intro.html#executing-a-playbook">Executing A Playbook</a></li>
+<li class="toctree-l5"><a class="reference internal" href="rst/playbooks_intro.html#ansible-pull">Ansible-Pull</a></li>
+<li class="toctree-l5"><a class="reference internal" href="rst/playbooks_intro.html#tips-and-tricks">Tips and Tricks</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="rst/playbooks_roles.html">Playbook Roles and Include Statements</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="rst/playbooks_roles.html#introduction">Introduction</a></li>
+<li class="toctree-l5"><a class="reference internal" href="rst/playbooks_roles.html#task-include-files-and-encouraging-reuse">Task Include Files And Encouraging Reuse</a></li>
+<li class="toctree-l5"><a class="reference internal" href="rst/playbooks_roles.html#roles">Roles</a></li>
+<li class="toctree-l5"><a class="reference internal" href="rst/playbooks_roles.html#role-default-variables">Role Default Variables</a></li>
+<li class="toctree-l5"><a class="reference internal" href="rst/playbooks_roles.html#role-dependencies">Role Dependencies</a></li>
+<li class="toctree-l5"><a class="reference internal" href="rst/playbooks_roles.html#embedding-modules-in-roles">Embedding Modules In Roles</a></li>
+<li class="toctree-l5"><a class="reference internal" href="rst/playbooks_roles.html#ansible-galaxy">Ansible Galaxy</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="rst/playbooks_variables.html">Variables</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="rst/playbooks_variables.html#what-makes-a-valid-variable-name">What Makes A Valid Variable Name</a></li>
+<li class="toctree-l5"><a class="reference internal" href="rst/playbooks_variables.html#variables-defined-in-inventory">Variables Defined in Inventory</a></li>
+<li class="toctree-l5"><a class="reference internal" href="rst/playbooks_variables.html#variables-defined-in-a-playbook">Variables Defined in a Playbook</a></li>
+<li class="toctree-l5"><a class="reference internal" href="rst/playbooks_variables.html#variables-defined-from-included-files-and-roles">Variables defined from included files and roles</a></li>
+<li class="toctree-l5"><a class="reference internal" href="rst/playbooks_variables.html#using-variables-about-jinja2">Using Variables: About Jinja2</a></li>
+<li class="toctree-l5"><a class="reference internal" href="rst/playbooks_variables.html#jinja2-filters">Jinja2 Filters</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="rst/playbooks_variables.html#filters-for-formatting-data">Filters For Formatting Data</a></li>
+<li class="toctree-l6"><a class="reference internal" href="rst/playbooks_variables.html#filters-often-used-with-conditionals">Filters Often Used With Conditionals</a></li>
+<li class="toctree-l6"><a class="reference internal" href="rst/playbooks_variables.html#forcing-variables-to-be-defined">Forcing Variables To Be Defined</a></li>
+<li class="toctree-l6"><a class="reference internal" href="rst/playbooks_variables.html#defaulting-undefined-variables">Defaulting Undefined Variables</a></li>
+<li class="toctree-l6"><a class="reference internal" href="rst/playbooks_variables.html#set-theory-filters">Set Theory Filters</a></li>
+<li class="toctree-l6"><a class="reference internal" href="rst/playbooks_variables.html#version-comparison-filters">Version Comparison Filters</a></li>
+<li class="toctree-l6"><a class="reference internal" href="rst/playbooks_variables.html#random-number-filter">Random Number Filter</a></li>
+<li class="toctree-l6"><a class="reference internal" href="rst/playbooks_variables.html#other-useful-filters">Other Useful Filters</a></li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="rst/playbooks_variables.html#hey-wait-a-yaml-gotcha">Hey Wait, A YAML Gotcha</a></li>
+<li class="toctree-l5"><a class="reference internal" href="rst/playbooks_variables.html#information-discovered-from-systems-facts">Information discovered from systems: Facts</a></li>
+<li class="toctree-l5"><a class="reference internal" href="rst/playbooks_variables.html#turning-off-facts">Turning Off Facts</a></li>
+<li class="toctree-l5"><a class="reference internal" href="rst/playbooks_variables.html#local-facts-facts-d">Local Facts (Facts.d)</a></li>
+<li class="toctree-l5"><a class="reference internal" href="rst/playbooks_variables.html#registered-variables">Registered Variables</a></li>
+<li class="toctree-l5"><a class="reference internal" href="rst/playbooks_variables.html#accessing-complex-variable-data">Accessing Complex Variable Data</a></li>
+<li class="toctree-l5"><a class="reference internal" href="rst/playbooks_variables.html#magic-variables-and-how-to-access-information-about-other-hosts">Magic Variables, and How To Access Information About Other Hosts</a></li>
+<li class="toctree-l5"><a class="reference internal" href="rst/playbooks_variables.html#variable-file-separation">Variable File Separation</a></li>
+<li class="toctree-l5"><a class="reference internal" href="rst/playbooks_variables.html#passing-variables-on-the-command-line">Passing Variables On The Command Line</a></li>
+<li class="toctree-l5"><a class="reference internal" href="rst/playbooks_variables.html#conditional-imports">Conditional Imports</a></li>
+<li class="toctree-l5"><a class="reference internal" href="rst/playbooks_variables.html#variable-precedence-where-should-i-put-a-variable">Variable Precedence: Where Should I Put A Variable?</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="rst/playbooks_conditionals.html">Conditionals</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="rst/playbooks_conditionals.html#the-when-statement">The When Statement</a></li>
+<li class="toctree-l5"><a class="reference internal" href="rst/playbooks_conditionals.html#loading-in-custom-facts">Loading in Custom Facts</a></li>
+<li class="toctree-l5"><a class="reference internal" href="rst/playbooks_conditionals.html#applying-when-to-roles-and-includes">Applying &#8216;when&#8217; to roles and includes</a></li>
+<li class="toctree-l5"><a class="reference internal" href="rst/playbooks_conditionals.html#conditional-imports">Conditional Imports</a></li>
+<li class="toctree-l5"><a class="reference internal" href="rst/playbooks_conditionals.html#selecting-files-and-templates-based-on-variables">Selecting Files And Templates Based On Variables</a></li>
+<li class="toctree-l5"><a class="reference internal" href="rst/playbooks_conditionals.html#register-variables">Register Variables</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="rst/playbooks_loops.html">Loops</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="rst/playbooks_loops.html#standard-loops">Standard Loops</a></li>
+<li class="toctree-l5"><a class="reference internal" href="rst/playbooks_loops.html#nested-loops">Nested Loops</a></li>
+<li class="toctree-l5"><a class="reference internal" href="rst/playbooks_loops.html#looping-over-hashes">Looping over Hashes</a></li>
+<li class="toctree-l5"><a class="reference internal" href="rst/playbooks_loops.html#looping-over-fileglobs">Looping over Fileglobs</a></li>
+<li class="toctree-l5"><a class="reference internal" href="rst/playbooks_loops.html#looping-over-parallel-sets-of-data">Looping over Parallel Sets of Data</a></li>
+<li class="toctree-l5"><a class="reference internal" href="rst/playbooks_loops.html#looping-over-subelements">Looping over Subelements</a></li>
+<li class="toctree-l5"><a class="reference internal" href="rst/playbooks_loops.html#looping-over-integer-sequences">Looping over Integer Sequences</a></li>
+<li class="toctree-l5"><a class="reference internal" href="rst/playbooks_loops.html#random-choices">Random Choices</a></li>
+<li class="toctree-l5"><a class="reference internal" href="rst/playbooks_loops.html#do-until-loops">Do-Until Loops</a></li>
+<li class="toctree-l5"><a class="reference internal" href="rst/playbooks_loops.html#finding-first-matched-files">Finding First Matched Files</a></li>
+<li class="toctree-l5"><a class="reference internal" href="rst/playbooks_loops.html#iterating-over-the-results-of-a-program-execution">Iterating Over The Results of a Program Execution</a></li>
+<li class="toctree-l5"><a class="reference internal" href="rst/playbooks_loops.html#looping-over-a-list-with-an-index">Looping Over A List With An Index</a></li>
+<li class="toctree-l5"><a class="reference internal" href="rst/playbooks_loops.html#flattening-a-list">Flattening A List</a></li>
+<li class="toctree-l5"><a class="reference internal" href="rst/playbooks_loops.html#using-register-with-a-loop">Using register with a loop</a></li>
+<li class="toctree-l5"><a class="reference internal" href="rst/playbooks_loops.html#writing-your-own-iterators">Writing Your Own Iterators</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="rst/playbooks_best_practices.html">Best Practices</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="rst/playbooks_best_practices.html#content-organization">Content Organization</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="rst/playbooks_best_practices.html#directory-layout">Directory Layout</a></li>
+<li class="toctree-l6"><a class="reference internal" href="rst/playbooks_best_practices.html#how-to-arrange-inventory-stage-vs-production">How to Arrange Inventory, Stage vs Production</a></li>
+<li class="toctree-l6"><a class="reference internal" href="rst/playbooks_best_practices.html#group-and-host-variables">Group And Host Variables</a></li>
+<li class="toctree-l6"><a class="reference internal" href="rst/playbooks_best_practices.html#top-level-playbooks-are-separated-by-role">Top Level Playbooks Are Separated By Role</a></li>
+<li class="toctree-l6"><a class="reference internal" href="rst/playbooks_best_practices.html#task-and-handler-organization-for-a-role">Task And Handler Organization For A Role</a></li>
+<li class="toctree-l6"><a class="reference internal" href="rst/playbooks_best_practices.html#what-this-organization-enables-examples">What This Organization Enables (Examples)</a></li>
+<li class="toctree-l6"><a class="reference internal" href="rst/playbooks_best_practices.html#deployment-vs-configuration-organization">Deployment vs Configuration Organization</a></li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="rst/playbooks_best_practices.html#stage-vs-production">Stage vs Production</a></li>
+<li class="toctree-l5"><a class="reference internal" href="rst/playbooks_best_practices.html#rolling-updates">Rolling Updates</a></li>
+<li class="toctree-l5"><a class="reference internal" href="rst/playbooks_best_practices.html#always-mention-the-state">Always Mention The State</a></li>
+<li class="toctree-l5"><a class="reference internal" href="rst/playbooks_best_practices.html#group-by-roles">Group By Roles</a></li>
+<li class="toctree-l5"><a class="reference internal" href="rst/playbooks_best_practices.html#operating-system-and-distribution-variance">Operating System and Distribution Variance</a></li>
+<li class="toctree-l5"><a class="reference internal" href="rst/playbooks_best_practices.html#bundling-ansible-modules-with-playbooks">Bundling Ansible Modules With Playbooks</a></li>
+<li class="toctree-l5"><a class="reference internal" href="rst/playbooks_best_practices.html#whitespace-and-comments">Whitespace and Comments</a></li>
+<li class="toctree-l5"><a class="reference internal" href="rst/playbooks_best_practices.html#always-name-tasks">Always Name Tasks</a></li>
+<li class="toctree-l5"><a class="reference internal" href="rst/playbooks_best_practices.html#keep-it-simple">Keep It Simple</a></li>
+<li class="toctree-l5"><a class="reference internal" href="rst/playbooks_best_practices.html#version-control">Version Control</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="rst/playbooks_special_topics.html">Playbooks: Special Topics</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="rst/playbooks_acceleration.html">Accelerated Mode</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="rst/playbooks_acceleration.html#you-might-not-need-this">You Might Not Need This!</a></li>
+<li class="toctree-l5"><a class="reference internal" href="rst/playbooks_acceleration.html#accelerate-mode-details">Accelerate Mode Details</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="rst/playbooks_async.html">Asynchronous Actions and Polling</a></li>
+<li class="toctree-l4"><a class="reference internal" href="rst/playbooks_checkmode.html">Check Mode (&#8220;Dry Run&#8221;)</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="rst/playbooks_checkmode.html#running-a-task-in-check-mode">Running a task in check mode</a></li>
+<li class="toctree-l5"><a class="reference internal" href="rst/playbooks_checkmode.html#showing-differences-with-diff">Showing Differences with <tt class="docutils literal"><span class="pre">--diff</span></tt></a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="rst/playbooks_delegation.html">Delegation, Rolling Updates, and Local Actions</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="rst/playbooks_delegation.html#rolling-update-batch-size">Rolling Update Batch Size</a></li>
+<li class="toctree-l5"><a class="reference internal" href="rst/playbooks_delegation.html#maximum-failure-percentage">Maximum Failure Percentage</a></li>
+<li class="toctree-l5"><a class="reference internal" href="rst/playbooks_delegation.html#delegation">Delegation</a></li>
+<li class="toctree-l5"><a class="reference internal" href="rst/playbooks_delegation.html#run-once">Run Once</a></li>
+<li class="toctree-l5"><a class="reference internal" href="rst/playbooks_delegation.html#local-playbooks">Local Playbooks</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="rst/playbooks_environment.html">Setting the Environment (and Working With Proxies)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="rst/playbooks_error_handling.html">Error Handling In Playbooks</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="rst/playbooks_error_handling.html#ignoring-failed-commands">Ignoring Failed Commands</a></li>
+<li class="toctree-l5"><a class="reference internal" href="rst/playbooks_error_handling.html#controlling-what-defines-failure">Controlling What Defines Failure</a></li>
+<li class="toctree-l5"><a class="reference internal" href="rst/playbooks_error_handling.html#overriding-the-changed-result">Overriding The Changed Result</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="rst/playbooks_lookups.html">Using Lookups</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="rst/playbooks_lookups.html#intro-to-lookups-getting-file-contents">Intro to Lookups: Getting File Contents</a></li>
+<li class="toctree-l5"><a class="reference internal" href="rst/playbooks_lookups.html#the-password-lookup">The Password Lookup</a></li>
+<li class="toctree-l5"><a class="reference internal" href="rst/playbooks_lookups.html#more-lookups">More Lookups</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="rst/playbooks_prompts.html">Prompts</a></li>
+<li class="toctree-l4"><a class="reference internal" href="rst/playbooks_tags.html">Tags</a></li>
+<li class="toctree-l4"><a class="reference internal" href="rst/playbooks_vault.html">Vault</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="rst/playbooks_vault.html#what-can-be-encrypted-with-vault">What Can Be Encrypted With Vault</a></li>
+<li class="toctree-l5"><a class="reference internal" href="rst/playbooks_vault.html#creating-encrypted-files">Creating Encrypted Files</a></li>
+<li class="toctree-l5"><a class="reference internal" href="rst/playbooks_vault.html#editing-encrypted-files">Editing Encrypted Files</a></li>
+<li class="toctree-l5"><a class="reference internal" href="rst/playbooks_vault.html#rekeying-encrypted-files">Rekeying Encrypted Files</a></li>
+<li class="toctree-l5"><a class="reference internal" href="rst/playbooks_vault.html#encrypting-unencrypted-files">Encrypting Unencrypted Files</a></li>
+<li class="toctree-l5"><a class="reference internal" href="rst/playbooks_vault.html#decrypting-encrypted-files">Decrypting Encrypted Files</a></li>
+<li class="toctree-l5"><a class="reference internal" href="rst/playbooks_vault.html#running-a-playbook-with-vault">Running a Playbook With Vault</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="rst/modules.html">About Modules</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="rst/modules.html#introduction">Introduction</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="rst/guides.html">Detailed Guides</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="rst/guide_aws.html">Amazon Web Services Guide</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="rst/guide_aws.html#introduction">Introduction</a></li>
+<li class="toctree-l5"><a class="reference internal" href="rst/guide_aws.html#provisioning">Provisioning</a></li>
+<li class="toctree-l5"><a class="reference internal" href="rst/guide_aws.html#advanced-usage">Advanced Usage</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="rst/guide_aws.html#host-inventory">Host Inventory</a></li>
+<li class="toctree-l6"><a class="reference internal" href="rst/guide_aws.html#tags">Tags</a></li>
+<li class="toctree-l6"><a class="reference internal" href="rst/guide_aws.html#pull-configuration">Pull Configuration</a></li>
+<li class="toctree-l6"><a class="reference internal" href="rst/guide_aws.html#autoscaling-with-ansible-tower">Autoscaling with Ansible Tower</a></li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="rst/guide_aws.html#use-cases">Use Cases</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="rst/guide_aws.html#example-1">Example 1</a></li>
+<li class="toctree-l6"><a class="reference internal" href="rst/guide_aws.html#example-2">Example 2</a></li>
+<li class="toctree-l6"><a class="reference internal" href="rst/guide_aws.html#example-3">Example 3</a></li>
+<li class="toctree-l6"><a class="reference internal" href="rst/guide_aws.html#example-4">Example 4</a></li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="rst/guide_aws.html#pending-information">Pending Information</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="rst/guide_rax.html">Rackspace Cloud Guide</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="rst/guide_rax.html#introduction">Introduction</a></li>
+<li class="toctree-l5"><a class="reference internal" href="rst/guide_rax.html#credentials-file">Credentials File</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="rst/guide_rax.html#running-from-a-python-virtual-environment-optional">Running from a Python Virtual Environment (Optional)</a></li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="rst/guide_rax.html#provisioning">Provisioning</a></li>
+<li class="toctree-l5"><a class="reference internal" href="rst/guide_rax.html#host-inventory">Host Inventory</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="rst/guide_rax.html#rax-py">rax.py</a></li>
+<li class="toctree-l6"><a class="reference internal" href="rst/guide_rax.html#standard-inventory">Standard Inventory</a></li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="rst/guide_rax.html#use-cases">Use Cases</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="rst/guide_rax.html#network-and-server">Network and Server</a></li>
+<li class="toctree-l6"><a class="reference internal" href="rst/guide_rax.html#complete-environment">Complete Environment</a></li>
+<li class="toctree-l6"><a class="reference internal" href="rst/guide_rax.html#rackconnect-and-managed-cloud">RackConnect and Managed Cloud</a><ul>
+<li class="toctree-l7"><a class="reference internal" href="rst/guide_rax.html#using-a-control-machine">Using a Control Machine</a></li>
+<li class="toctree-l7"><a class="reference internal" href="rst/guide_rax.html#using-ansible-pull">Using Ansible Pull</a></li>
+<li class="toctree-l7"><a class="reference internal" href="rst/guide_rax.html#using-ansible-pull-with-xenstore">Using Ansible Pull with XenStore</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="rst/guide_rax.html#advanced-usage">Advanced Usage</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="rst/guide_rax.html#autoscaling-with-tower">Autoscaling with Tower</a></li>
+<li class="toctree-l6"><a class="reference internal" href="rst/guide_rax.html#orchestration-in-the-rackspace-cloud">Orchestration in the Rackspace Cloud</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="rst/guide_gce.html">Google Cloud Platform Guide</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="rst/guide_gce.html#introduction">Introduction</a></li>
+<li class="toctree-l5"><a class="reference internal" href="rst/guide_gce.html#credentials">Credentials</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="rst/guide_gce.html#calling-modules-by-passing-credentials">Calling Modules By Passing Credentials</a></li>
+<li class="toctree-l6"><a class="reference internal" href="rst/guide_gce.html#calling-modules-with-secrets-py">Calling Modules with secrets.py</a></li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="rst/guide_gce.html#gce-dynamic-inventory">GCE Dynamic Inventory</a></li>
+<li class="toctree-l5"><a class="reference internal" href="rst/guide_gce.html#use-cases">Use Cases</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="rst/guide_gce.html#create-an-instance">Create an instance</a></li>
+<li class="toctree-l6"><a class="reference internal" href="rst/guide_gce.html#configuring-instances-in-a-group">Configuring instances in a group</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="rst/guide_vagrant.html">Using Vagrant and Ansible</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="rst/guide_vagrant.html#introduction">Introduction</a></li>
+<li class="toctree-l5"><a class="reference internal" href="rst/guide_vagrant.html#vagrant-setup">Vagrant Setup</a></li>
+<li class="toctree-l5"><a class="reference internal" href="rst/guide_vagrant.html#running-ansible-manually">Running Ansible Manually</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="rst/guide_rolling_upgrade.html">Continuous Delivery and Rolling Upgrades</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="rst/guide_rolling_upgrade.html#introduction">Introduction</a></li>
+<li class="toctree-l5"><a class="reference internal" href="rst/guide_rolling_upgrade.html#site-deployment">Site Deployment</a></li>
+<li class="toctree-l5"><a class="reference internal" href="rst/guide_rolling_upgrade.html#reusable-content-roles">Reusable Content: Roles</a></li>
+<li class="toctree-l5"><a class="reference internal" href="rst/guide_rolling_upgrade.html#configuration-group-variables">Configuration: Group Variables</a></li>
+<li class="toctree-l5"><a class="reference internal" href="rst/guide_rolling_upgrade.html#the-rolling-upgrade">The Rolling Upgrade</a></li>
+<li class="toctree-l5"><a class="reference internal" href="rst/guide_rolling_upgrade.html#managing-other-load-balancers">Managing Other Load Balancers</a></li>
+<li class="toctree-l5"><a class="reference internal" href="rst/guide_rolling_upgrade.html#continuous-delivery-end-to-end">Continuous Delivery End-To-End</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="rst/test_strategies.html">Testing Strategies</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="rst/test_strategies.html#integrating-testing-with-ansible-playbooks">Integrating Testing With Ansible Playbooks</a></li>
+<li class="toctree-l5"><a class="reference internal" href="rst/test_strategies.html#the-right-level-of-testing">The Right Level of Testing</a></li>
+<li class="toctree-l5"><a class="reference internal" href="rst/test_strategies.html#check-mode-as-a-drift-test">Check Mode As A Drift Test</a></li>
+<li class="toctree-l5"><a class="reference internal" href="rst/test_strategies.html#modules-that-are-useful-for-testing">Modules That Are Useful for Testing</a></li>
+<li class="toctree-l5"><a class="reference internal" href="rst/test_strategies.html#testing-lifecycle">Testing Lifecycle</a></li>
+<li class="toctree-l5"><a class="reference internal" href="rst/test_strategies.html#integrating-testing-with-rolling-updates">Integrating Testing With Rolling Updates</a></li>
+<li class="toctree-l5"><a class="reference internal" href="rst/test_strategies.html#achieving-continous-deployment">Achieving Continous Deployment</a></li>
+<li class="toctree-l5"><a class="reference internal" href="rst/test_strategies.html#conclusion">Conclusion</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="rst/developing.html">Developer Information</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="rst/developing_api.html">Python API</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="rst/developing_api.html#id1">Python API</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="rst/developing_api.html#detailed-api-example">Detailed API Example</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="rst/developing_inventory.html">Developing Dynamic Inventory Sources</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="rst/developing_inventory.html#script-conventions">Script Conventions</a></li>
+<li class="toctree-l5"><a class="reference internal" href="rst/developing_inventory.html#tuning-the-external-inventory-script">Tuning the External Inventory Script</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="rst/developing_modules.html">Developing Modules</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="rst/developing_modules.html#tutorial">Tutorial</a></li>
+<li class="toctree-l5"><a class="reference internal" href="rst/developing_modules.html#testing-modules">Testing Modules</a></li>
+<li class="toctree-l5"><a class="reference internal" href="rst/developing_modules.html#reading-input">Reading Input</a></li>
+<li class="toctree-l5"><a class="reference internal" href="rst/developing_modules.html#module-provided-facts">Module Provided &#8216;Facts&#8217;</a></li>
+<li class="toctree-l5"><a class="reference internal" href="rst/developing_modules.html#common-module-boilerplate">Common Module Boilerplate</a></li>
+<li class="toctree-l5"><a class="reference internal" href="rst/developing_modules.html#check-mode">Check Mode</a></li>
+<li class="toctree-l5"><a class="reference internal" href="rst/developing_modules.html#common-pitfalls">Common Pitfalls</a></li>
+<li class="toctree-l5"><a class="reference internal" href="rst/developing_modules.html#conventions-recommendations">Conventions/Recommendations</a></li>
+<li class="toctree-l5"><a class="reference internal" href="rst/developing_modules.html#shorthand-vs-json">Shorthand Vs JSON</a></li>
+<li class="toctree-l5"><a class="reference internal" href="rst/developing_modules.html#documenting-your-module">Documenting Your Module</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="rst/developing_modules.html#example">Example</a></li>
+<li class="toctree-l6"><a class="reference internal" href="rst/developing_modules.html#building-testing">Building &amp; Testing</a></li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="rst/developing_modules.html#getting-your-module-into-core">Getting Your Module Into Core</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="rst/developing_plugins.html">Developing Plugins</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="rst/developing_plugins.html#connection-type-plugins">Connection Type Plugins</a></li>
+<li class="toctree-l5"><a class="reference internal" href="rst/developing_plugins.html#lookup-plugins">Lookup Plugins</a></li>
+<li class="toctree-l5"><a class="reference internal" href="rst/developing_plugins.html#vars-plugins">Vars Plugins</a></li>
+<li class="toctree-l5"><a class="reference internal" href="rst/developing_plugins.html#filter-plugins">Filter Plugins</a></li>
+<li class="toctree-l5"><a class="reference internal" href="rst/developing_plugins.html#callbacks">Callbacks</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="rst/developing_plugins.html#examples">Examples</a></li>
+<li class="toctree-l6"><a class="reference internal" href="rst/developing_plugins.html#configuring">Configuring</a></li>
+<li class="toctree-l6"><a class="reference internal" href="rst/developing_plugins.html#development">Development</a></li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="rst/developing_plugins.html#distributing-plugins">Distributing Plugins</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="rst/tower.html">Ansible Tower</a></li>
+<li class="toctree-l3"><a class="reference internal" href="rst/community.html">Community Information</a></li>
+<li class="toctree-l3"><a class="reference internal" href="rst/galaxy.html">Ansible Galaxy</a></li>
+<li class="toctree-l3"><a class="reference internal" href="rst/test_strategies.html">Testing Strategies</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="rst/test_strategies.html#integrating-testing-with-ansible-playbooks">Integrating Testing With Ansible Playbooks</a></li>
+<li class="toctree-l4"><a class="reference internal" href="rst/test_strategies.html#the-right-level-of-testing">The Right Level of Testing</a></li>
+<li class="toctree-l4"><a class="reference internal" href="rst/test_strategies.html#check-mode-as-a-drift-test">Check Mode As A Drift Test</a></li>
+<li class="toctree-l4"><a class="reference internal" href="rst/test_strategies.html#modules-that-are-useful-for-testing">Modules That Are Useful for Testing</a></li>
+<li class="toctree-l4"><a class="reference internal" href="rst/test_strategies.html#testing-lifecycle">Testing Lifecycle</a></li>
+<li class="toctree-l4"><a class="reference internal" href="rst/test_strategies.html#integrating-testing-with-rolling-updates">Integrating Testing With Rolling Updates</a></li>
+<li class="toctree-l4"><a class="reference internal" href="rst/test_strategies.html#achieving-continous-deployment">Achieving Continous Deployment</a></li>
+<li class="toctree-l4"><a class="reference internal" href="rst/test_strategies.html#conclusion">Conclusion</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="rst/faq.html">Frequently Asked Questions</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="rst/faq.html#how-do-i-handle-different-machines-needing-different-user-accounts-or-ports-to-log-in-with">How do I handle different machines needing different user accounts or ports to log in with?</a></li>
+<li class="toctree-l4"><a class="reference internal" href="rst/faq.html#how-do-i-get-ansible-to-reuse-connections-enable-kerberized-ssh-or-have-ansible-pay-attention-to-my-local-ssh-config-file">How do I get ansible to reuse connections, enable Kerberized SSH, or have Ansible pay attention to my local SSH config file?</a></li>
+<li class="toctree-l4"><a class="reference internal" href="rst/faq.html#how-do-i-speed-up-management-inside-ec2">How do I speed up management inside EC2?</a></li>
+<li class="toctree-l4"><a class="reference internal" href="rst/faq.html#how-do-i-handle-python-pathing-not-having-a-python-2-x-in-usr-bin-python-on-a-remote-machine">How do I handle python pathing not having a Python 2.X in /usr/bin/python on a remote machine?</a></li>
+<li class="toctree-l4"><a class="reference internal" href="rst/faq.html#what-is-the-best-way-to-make-content-reusable-redistributable">What is the best way to make content reusable/redistributable?</a></li>
+<li class="toctree-l4"><a class="reference internal" href="rst/faq.html#where-does-the-configuration-file-live-and-what-can-i-configure-in-it">Where does the configuration file live and what can I configure in it?</a></li>
+<li class="toctree-l4"><a class="reference internal" href="rst/faq.html#how-do-i-disable-cowsay">How do I disable cowsay?</a></li>
+<li class="toctree-l4"><a class="reference internal" href="rst/faq.html#how-do-i-see-a-list-of-all-of-the-ansible-variables">How do I see a list of all of the ansible_ variables?</a></li>
+<li class="toctree-l4"><a class="reference internal" href="rst/faq.html#how-do-i-loop-over-a-list-of-hosts-in-a-group-inside-of-a-template">How do I loop over a list of hosts in a group, inside of a template?</a></li>
+<li class="toctree-l4"><a class="reference internal" href="rst/faq.html#how-do-i-access-a-variable-name-programmatically">How do I access a variable name programmatically?</a></li>
+<li class="toctree-l4"><a class="reference internal" href="rst/faq.html#how-do-i-access-a-variable-of-the-first-host-in-a-group">How do I access a variable of the first host in a group?</a></li>
+<li class="toctree-l4"><a class="reference internal" href="rst/faq.html#how-do-i-copy-files-recursively-onto-a-target-host">How do I copy files recursively onto a target host?</a></li>
+<li class="toctree-l4"><a class="reference internal" href="rst/faq.html#how-do-i-access-shell-environment-variables">How do I access shell environment variables?</a></li>
+<li class="toctree-l4"><a class="reference internal" href="rst/faq.html#how-do-i-generate-crypted-passwords-for-the-user-module">How do I generate crypted passwords for the user module?</a></li>
+<li class="toctree-l4"><a class="reference internal" href="rst/faq.html#can-i-get-training-on-ansible-or-find-commercial-support">Can I get training on Ansible or find commercial support?</a></li>
+<li class="toctree-l4"><a class="reference internal" href="rst/faq.html#is-there-a-web-interface-rest-api-etc">Is there a web interface / REST API / etc?</a></li>
+<li class="toctree-l4"><a class="reference internal" href="rst/faq.html#how-do-i-submit-a-change-to-the-documentation">How do I submit a change to the documentation?</a></li>
+<li class="toctree-l4"><a class="reference internal" href="rst/faq.html#how-do-i-keep-secret-data-in-my-playbook">How do I keep secret data in my playbook?</a></li>
+<li class="toctree-l4"><a class="reference internal" href="rst/faq.html#i-don-t-see-my-question-here">I don&#8217;t see my question here</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="rst/glossary.html">Glossary</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="rst/glossary.html#action">Action</a></li>
+<li class="toctree-l4"><a class="reference internal" href="rst/glossary.html#ad-hoc">Ad Hoc</a></li>
+<li class="toctree-l4"><a class="reference internal" href="rst/glossary.html#async">Async</a></li>
+<li class="toctree-l4"><a class="reference internal" href="rst/glossary.html#callback-plugin">Callback Plugin</a></li>
+<li class="toctree-l4"><a class="reference internal" href="rst/glossary.html#check-mode">Check Mode</a></li>
+<li class="toctree-l4"><a class="reference internal" href="rst/glossary.html#connection-type-connection-plugin">Connection Type, Connection Plugin</a></li>
+<li class="toctree-l4"><a class="reference internal" href="rst/glossary.html#conditionals">Conditionals</a></li>
+<li class="toctree-l4"><a class="reference internal" href="rst/glossary.html#diff-mode">Diff Mode</a></li>
+<li class="toctree-l4"><a class="reference internal" href="rst/glossary.html#facts">Facts</a></li>
+<li class="toctree-l4"><a class="reference internal" href="rst/glossary.html#filter-plugin">Filter Plugin</a></li>
+<li class="toctree-l4"><a class="reference internal" href="rst/glossary.html#forks">Forks</a></li>
+<li class="toctree-l4"><a class="reference internal" href="rst/glossary.html#gather-facts-boolean">Gather Facts (Boolean)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="rst/glossary.html#globbing">Globbing</a></li>
+<li class="toctree-l4"><a class="reference internal" href="rst/glossary.html#group">Group</a></li>
+<li class="toctree-l4"><a class="reference internal" href="rst/glossary.html#group-vars">Group Vars</a></li>
+<li class="toctree-l4"><a class="reference internal" href="rst/glossary.html#handlers">Handlers</a></li>
+<li class="toctree-l4"><a class="reference internal" href="rst/glossary.html#host">Host</a></li>
+<li class="toctree-l4"><a class="reference internal" href="rst/glossary.html#host-specifier">Host Specifier</a></li>
+<li class="toctree-l4"><a class="reference internal" href="rst/glossary.html#host-vars">Host Vars</a></li>
+<li class="toctree-l4"><a class="reference internal" href="rst/glossary.html#lazy-evaluation">Lazy Evaluation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="rst/glossary.html#lookup-plugin">Lookup Plugin</a></li>
+<li class="toctree-l4"><a class="reference internal" href="rst/glossary.html#multi-tier">Multi-Tier</a></li>
+<li class="toctree-l4"><a class="reference internal" href="rst/glossary.html#idempotency">Idempotency</a></li>
+<li class="toctree-l4"><a class="reference internal" href="rst/glossary.html#includes">Includes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="rst/glossary.html#inventory">Inventory</a></li>
+<li class="toctree-l4"><a class="reference internal" href="rst/glossary.html#inventory-script">Inventory Script</a></li>
+<li class="toctree-l4"><a class="reference internal" href="rst/glossary.html#jinja2">Jinja2</a></li>
+<li class="toctree-l4"><a class="reference internal" href="rst/glossary.html#json">JSON</a></li>
+<li class="toctree-l4"><a class="reference internal" href="rst/glossary.html#library">Library</a></li>
+<li class="toctree-l4"><a class="reference internal" href="rst/glossary.html#limit-groups">Limit Groups</a></li>
+<li class="toctree-l4"><a class="reference internal" href="rst/glossary.html#local-connection">Local Connection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="rst/glossary.html#local-action">Local Action</a></li>
+<li class="toctree-l4"><a class="reference internal" href="rst/glossary.html#loops">Loops</a></li>
+<li class="toctree-l4"><a class="reference internal" href="rst/glossary.html#modules">Modules</a></li>
+<li class="toctree-l4"><a class="reference internal" href="rst/glossary.html#notify">Notify</a></li>
+<li class="toctree-l4"><a class="reference internal" href="rst/glossary.html#orchestration">Orchestration</a></li>
+<li class="toctree-l4"><a class="reference internal" href="rst/glossary.html#paramiko">paramiko</a></li>
+<li class="toctree-l4"><a class="reference internal" href="rst/glossary.html#playbooks">Playbooks</a></li>
+<li class="toctree-l4"><a class="reference internal" href="rst/glossary.html#plays">Plays</a></li>
+<li class="toctree-l4"><a class="reference internal" href="rst/glossary.html#pull-mode">Pull Mode</a></li>
+<li class="toctree-l4"><a class="reference internal" href="rst/glossary.html#push-mode">Push Mode</a></li>
+<li class="toctree-l4"><a class="reference internal" href="rst/glossary.html#register-variable">Register Variable</a></li>
+<li class="toctree-l4"><a class="reference internal" href="rst/glossary.html#resource-model">Resource Model</a></li>
+<li class="toctree-l4"><a class="reference internal" href="rst/glossary.html#roles">Roles</a></li>
+<li class="toctree-l4"><a class="reference internal" href="rst/glossary.html#rolling-update">Rolling Update</a></li>
+<li class="toctree-l4"><a class="reference internal" href="rst/glossary.html#runner">Runner</a></li>
+<li class="toctree-l4"><a class="reference internal" href="rst/glossary.html#serial">Serial</a></li>
+<li class="toctree-l4"><a class="reference internal" href="rst/glossary.html#sudo">Sudo</a></li>
+<li class="toctree-l4"><a class="reference internal" href="rst/glossary.html#ssh-native">SSH (Native)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="rst/glossary.html#tags">Tags</a></li>
+<li class="toctree-l4"><a class="reference internal" href="rst/glossary.html#tasks">Tasks</a></li>
+<li class="toctree-l4"><a class="reference internal" href="rst/glossary.html#templates">Templates</a></li>
+<li class="toctree-l4"><a class="reference internal" href="rst/glossary.html#transport">Transport</a></li>
+<li class="toctree-l4"><a class="reference internal" href="rst/glossary.html#when">When</a></li>
+<li class="toctree-l4"><a class="reference internal" href="rst/glossary.html#van-halen">Van Halen</a></li>
+<li class="toctree-l4"><a class="reference internal" href="rst/glossary.html#vars-variables">Vars (Variables)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="rst/glossary.html#yaml">YAML</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="rst/YAMLSyntax.html">YAML Syntax</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="rst/YAMLSyntax.html#yaml-basics">YAML Basics</a></li>
+<li class="toctree-l4"><a class="reference internal" href="rst/YAMLSyntax.html#gotchas">Gotchas</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="rst/guru.html">Ansible Guru</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="rst/intro.html">Introduction</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="rst/intro_installation.html">Installation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="rst/intro_installation.html#getting-ansible">Getting Ansible</a></li>
+<li class="toctree-l3"><a class="reference internal" href="rst/intro_installation.html#basics-what-will-be-installed">Basics / What Will Be Installed</a></li>
+<li class="toctree-l3"><a class="reference internal" href="rst/intro_installation.html#what-version-to-pick">What Version To Pick?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="rst/intro_installation.html#control-machine-requirements">Control Machine Requirements</a></li>
+<li class="toctree-l3"><a class="reference internal" href="rst/intro_installation.html#managed-node-requirements">Managed Node Requirements</a></li>
+<li class="toctree-l3"><a class="reference internal" href="rst/intro_installation.html#installing-the-control-machine">Installing the Control Machine</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="rst/intro_installation.html#running-from-source">Running From Source</a></li>
+<li class="toctree-l4"><a class="reference internal" href="rst/intro_installation.html#latest-release-via-yum">Latest Release Via Yum</a></li>
+<li class="toctree-l4"><a class="reference internal" href="rst/intro_installation.html#latest-releases-via-apt-ubuntu">Latest Releases Via Apt (Ubuntu)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="rst/intro_installation.html#latest-releases-via-pkg-freebsd">Latest Releases Via pkg (FreeBSD)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="rst/intro_installation.html#latest-releases-via-homebrew-mac-osx">Latest Releases Via Homebrew (Mac OSX)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="rst/intro_installation.html#latest-releases-via-pip">Latest Releases Via Pip</a></li>
+<li class="toctree-l4"><a class="reference internal" href="rst/intro_installation.html#tarballs-of-tagged-releases">Tarballs of Tagged Releases</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="rst/intro_getting_started.html">Getting Started</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="rst/intro_getting_started.html#foreword">Foreword</a></li>
+<li class="toctree-l3"><a class="reference internal" href="rst/intro_getting_started.html#remote-connection-information">Remote Connection Information</a></li>
+<li class="toctree-l3"><a class="reference internal" href="rst/intro_getting_started.html#your-first-commands">Your first commands</a></li>
+<li class="toctree-l3"><a class="reference internal" href="rst/intro_getting_started.html#host-key-checking">Host Key Checking</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="rst/intro_inventory.html">Inventory</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="rst/intro_inventory.html#hosts-and-groups">Hosts and Groups</a></li>
+<li class="toctree-l3"><a class="reference internal" href="rst/intro_inventory.html#host-variables">Host Variables</a></li>
+<li class="toctree-l3"><a class="reference internal" href="rst/intro_inventory.html#group-variables">Group Variables</a></li>
+<li class="toctree-l3"><a class="reference internal" href="rst/intro_inventory.html#groups-of-groups-and-group-variables">Groups of Groups, and Group Variables</a></li>
+<li class="toctree-l3"><a class="reference internal" href="rst/intro_inventory.html#splitting-out-host-and-group-specific-data">Splitting Out Host and Group Specific Data</a></li>
+<li class="toctree-l3"><a class="reference internal" href="rst/intro_inventory.html#list-of-behavioral-inventory-parameters">List of Behavioral Inventory Parameters</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="rst/intro_dynamic_inventory.html">Dynamic Inventory</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="rst/intro_dynamic_inventory.html#example-the-cobbler-external-inventory-script">Example: The Cobbler External Inventory Script</a></li>
+<li class="toctree-l3"><a class="reference internal" href="rst/intro_dynamic_inventory.html#example-aws-ec2-external-inventory-script">Example: AWS EC2 External Inventory Script</a></li>
+<li class="toctree-l3"><a class="reference internal" href="rst/intro_dynamic_inventory.html#other-inventory-scripts">Other inventory scripts</a></li>
+<li class="toctree-l3"><a class="reference internal" href="rst/intro_dynamic_inventory.html#using-multiple-inventory-sources">Using Multiple Inventory Sources</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="rst/intro_patterns.html">Patterns</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rst/intro_adhoc.html">Introduction To Ad-Hoc Commands</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="rst/intro_adhoc.html#parallelism-and-shell-commands">Parallelism and Shell Commands</a></li>
+<li class="toctree-l3"><a class="reference internal" href="rst/intro_adhoc.html#file-transfer">File Transfer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="rst/intro_adhoc.html#managing-packages">Managing Packages</a></li>
+<li class="toctree-l3"><a class="reference internal" href="rst/intro_adhoc.html#users-and-groups">Users and Groups</a></li>
+<li class="toctree-l3"><a class="reference internal" href="rst/intro_adhoc.html#deploying-from-source-control">Deploying From Source Control</a></li>
+<li class="toctree-l3"><a class="reference internal" href="rst/intro_adhoc.html#managing-services">Managing Services</a></li>
+<li class="toctree-l3"><a class="reference internal" href="rst/intro_adhoc.html#time-limited-background-operations">Time Limited Background Operations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="rst/intro_adhoc.html#gathering-facts">Gathering Facts</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="rst/intro_configuration.html">The Ansible Configuration File</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="rst/intro_configuration.html#getting-the-latest-configuration">Getting the latest configuration</a></li>
+<li class="toctree-l3"><a class="reference internal" href="rst/intro_configuration.html#environmental-configuration">Environmental configuration</a></li>
+<li class="toctree-l3"><a class="reference internal" href="rst/intro_configuration.html#explanation-of-values-by-section">Explanation of values by section</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="rst/intro_configuration.html#general-defaults">General defaults</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="rst/intro_configuration.html#action-plugins">action_plugins</a></li>
+<li class="toctree-l5"><a class="reference internal" href="rst/intro_configuration.html#ansible-managed">ansible_managed</a></li>
+<li class="toctree-l5"><a class="reference internal" href="rst/intro_configuration.html#ask-pass">ask_pass</a></li>
+<li class="toctree-l5"><a class="reference internal" href="rst/intro_configuration.html#ask-sudo-pass">ask_sudo_pass</a></li>
+<li class="toctree-l5"><a class="reference internal" href="rst/intro_configuration.html#callback-plugins">callback_plugins</a></li>
+<li class="toctree-l5"><a class="reference internal" href="rst/intro_configuration.html#connection-plugins">connection_plugins</a></li>
+<li class="toctree-l5"><a class="reference internal" href="rst/intro_configuration.html#deprecation-warnings">deprecation_warnings</a></li>
+<li class="toctree-l5"><a class="reference internal" href="rst/intro_configuration.html#display-skipped-hosts">display_skipped_hosts</a></li>
+<li class="toctree-l5"><a class="reference internal" href="rst/intro_configuration.html#error-on-undefined-vars">error_on_undefined_vars</a></li>
+<li class="toctree-l5"><a class="reference internal" href="rst/intro_configuration.html#executable">executable</a></li>
+<li class="toctree-l5"><a class="reference internal" href="rst/intro_configuration.html#filter-plugins">filter_plugins</a></li>
+<li class="toctree-l5"><a class="reference internal" href="rst/intro_configuration.html#forks">forks</a></li>
+<li class="toctree-l5"><a class="reference internal" href="rst/intro_configuration.html#gathering">gathering</a></li>
+<li class="toctree-l5"><a class="reference internal" href="rst/intro_configuration.html#hash-behaviour">hash_behaviour</a></li>
+<li class="toctree-l5"><a class="reference internal" href="rst/intro_configuration.html#hostfile">hostfile</a></li>
+<li class="toctree-l5"><a class="reference internal" href="rst/intro_configuration.html#host-key-checking">host_key_checking</a></li>
+<li class="toctree-l5"><a class="reference internal" href="rst/intro_configuration.html#jinja2-extensions">jinja2_extensions</a></li>
+<li class="toctree-l5"><a class="reference internal" href="rst/intro_configuration.html#legacy-playbook-variables">legacy_playbook_variables</a></li>
+<li class="toctree-l5"><a class="reference internal" href="rst/intro_configuration.html#library">library</a></li>
+<li class="toctree-l5"><a class="reference internal" href="rst/intro_configuration.html#log-path">log_path</a></li>
+<li class="toctree-l5"><a class="reference internal" href="rst/intro_configuration.html#lookup-plugins">lookup_plugins</a></li>
+<li class="toctree-l5"><a class="reference internal" href="rst/intro_configuration.html#module-lang">module_lang</a></li>
+<li class="toctree-l5"><a class="reference internal" href="rst/intro_configuration.html#module-name">module_name</a></li>
+<li class="toctree-l5"><a class="reference internal" href="rst/intro_configuration.html#nocolor">nocolor</a></li>
+<li class="toctree-l5"><a class="reference internal" href="rst/intro_configuration.html#nocows">nocows</a></li>
+<li class="toctree-l5"><a class="reference internal" href="rst/intro_configuration.html#pattern">pattern</a></li>
+<li class="toctree-l5"><a class="reference internal" href="rst/intro_configuration.html#poll-interval">poll_interval</a></li>
+<li class="toctree-l5"><a class="reference internal" href="rst/intro_configuration.html#private-key-file">private_key_file</a></li>
+<li class="toctree-l5"><a class="reference internal" href="rst/intro_configuration.html#remote-port">remote_port</a></li>
+<li class="toctree-l5"><a class="reference internal" href="rst/intro_configuration.html#remote-tmp">remote_tmp</a></li>
+<li class="toctree-l5"><a class="reference internal" href="rst/intro_configuration.html#remote-user">remote_user</a></li>
+<li class="toctree-l5"><a class="reference internal" href="rst/intro_configuration.html#roles-path">roles_path</a></li>
+<li class="toctree-l5"><a class="reference internal" href="rst/intro_configuration.html#sudo-exe">sudo_exe</a></li>
+<li class="toctree-l5"><a class="reference internal" href="rst/intro_configuration.html#sudo-flags">sudo_flags</a></li>
+<li class="toctree-l5"><a class="reference internal" href="rst/intro_configuration.html#sudo-user">sudo_user</a></li>
+<li class="toctree-l5"><a class="reference internal" href="rst/intro_configuration.html#system-warnings">system_warnings</a></li>
+<li class="toctree-l5"><a class="reference internal" href="rst/intro_configuration.html#timeout">timeout</a></li>
+<li class="toctree-l5"><a class="reference internal" href="rst/intro_configuration.html#transport">transport</a></li>
+<li class="toctree-l5"><a class="reference internal" href="rst/intro_configuration.html#vars-plugins">vars_plugins</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="rst/intro_configuration.html#paramiko-specific-settings">Paramiko Specific Settings</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="rst/intro_configuration.html#record-host-keys">record_host_keys</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="rst/intro_configuration.html#openssh-specific-settings">OpenSSH Specific Settings</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="rst/intro_configuration.html#ssh-args">ssh_args</a></li>
+<li class="toctree-l5"><a class="reference internal" href="rst/intro_configuration.html#control-path">control_path</a></li>
+<li class="toctree-l5"><a class="reference internal" href="rst/intro_configuration.html#scp-if-ssh">scp_if_ssh</a></li>
+<li class="toctree-l5"><a class="reference internal" href="rst/intro_configuration.html#pipelining">pipelining</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="rst/intro_configuration.html#accelerate-mode-settings">Accelerate Mode Settings</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="rst/intro_configuration.html#accelerate-port">accelerate_port</a></li>
+<li class="toctree-l5"><a class="reference internal" href="rst/intro_configuration.html#accelerate-timeout">accelerate_timeout</a></li>
+<li class="toctree-l5"><a class="reference internal" href="rst/intro_configuration.html#accelerate-connect-timeout">accelerate_connect_timeout</a></li>
+<li class="toctree-l5"><a class="reference internal" href="rst/intro_configuration.html#accelerate-daemon-timeout">accelerate_daemon_timeout</a></li>
+<li class="toctree-l5"><a class="reference internal" href="rst/intro_configuration.html#accelerate-multi-key">accelerate_multi_key</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="rst/intro_windows.html">Windows Support</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="rst/intro_windows.html#windows-how-does-it-work">Windows: How Does It Work</a></li>
+<li class="toctree-l3"><a class="reference internal" href="rst/intro_windows.html#installing-on-the-control-machine">Installing on the Control Machine</a></li>
+<li class="toctree-l3"><a class="reference internal" href="rst/intro_windows.html#inventory">Inventory</a></li>
+<li class="toctree-l3"><a class="reference internal" href="rst/intro_windows.html#windows-system-prep">Windows System Prep</a></li>
+<li class="toctree-l3"><a class="reference internal" href="rst/intro_windows.html#getting-to-powershell-3-0-or-higher">Getting to Powershell 3.0 or higher</a></li>
+<li class="toctree-l3"><a class="reference internal" href="rst/intro_windows.html#what-modules-are-available">What modules are available</a></li>
+<li class="toctree-l3"><a class="reference internal" href="rst/intro_windows.html#developers-supported-modules-and-how-it-works">Developers: Supported modules and how it works</a></li>
+<li class="toctree-l3"><a class="reference internal" href="rst/intro_windows.html#reminder-you-must-have-a-linux-control-machine">Reminder: You Must Have a Linux Control Machine</a></li>
+<li class="toctree-l3"><a class="reference internal" href="rst/intro_windows.html#windows-facts">Windows Facts</a></li>
+<li class="toctree-l3"><a class="reference internal" href="rst/intro_windows.html#windows-playbook-examples">Windows Playbook Examples</a></li>
+<li class="toctree-l3"><a class="reference internal" href="rst/intro_windows.html#windows-contributions">Windows Contributions</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="rst/intro_adhoc.html">Introduction To Ad-Hoc Commands</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="rst/intro_adhoc.html#parallelism-and-shell-commands">Parallelism and Shell Commands</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rst/intro_adhoc.html#file-transfer">File Transfer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rst/intro_adhoc.html#managing-packages">Managing Packages</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rst/intro_adhoc.html#users-and-groups">Users and Groups</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rst/intro_adhoc.html#deploying-from-source-control">Deploying From Source Control</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rst/intro_adhoc.html#managing-services">Managing Services</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rst/intro_adhoc.html#time-limited-background-operations">Time Limited Background Operations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rst/intro_adhoc.html#gathering-facts">Gathering Facts</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="rst/intro_configuration.html">The Ansible Configuration File</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="rst/intro_configuration.html#getting-the-latest-configuration">Getting the latest configuration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rst/intro_configuration.html#environmental-configuration">Environmental configuration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rst/intro_configuration.html#explanation-of-values-by-section">Explanation of values by section</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="rst/intro_configuration.html#general-defaults">General defaults</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="rst/intro_configuration.html#action-plugins">action_plugins</a></li>
+<li class="toctree-l4"><a class="reference internal" href="rst/intro_configuration.html#ansible-managed">ansible_managed</a></li>
+<li class="toctree-l4"><a class="reference internal" href="rst/intro_configuration.html#ask-pass">ask_pass</a></li>
+<li class="toctree-l4"><a class="reference internal" href="rst/intro_configuration.html#ask-sudo-pass">ask_sudo_pass</a></li>
+<li class="toctree-l4"><a class="reference internal" href="rst/intro_configuration.html#callback-plugins">callback_plugins</a></li>
+<li class="toctree-l4"><a class="reference internal" href="rst/intro_configuration.html#connection-plugins">connection_plugins</a></li>
+<li class="toctree-l4"><a class="reference internal" href="rst/intro_configuration.html#deprecation-warnings">deprecation_warnings</a></li>
+<li class="toctree-l4"><a class="reference internal" href="rst/intro_configuration.html#display-skipped-hosts">display_skipped_hosts</a></li>
+<li class="toctree-l4"><a class="reference internal" href="rst/intro_configuration.html#error-on-undefined-vars">error_on_undefined_vars</a></li>
+<li class="toctree-l4"><a class="reference internal" href="rst/intro_configuration.html#executable">executable</a></li>
+<li class="toctree-l4"><a class="reference internal" href="rst/intro_configuration.html#filter-plugins">filter_plugins</a></li>
+<li class="toctree-l4"><a class="reference internal" href="rst/intro_configuration.html#forks">forks</a></li>
+<li class="toctree-l4"><a class="reference internal" href="rst/intro_configuration.html#gathering">gathering</a></li>
+<li class="toctree-l4"><a class="reference internal" href="rst/intro_configuration.html#hash-behaviour">hash_behaviour</a></li>
+<li class="toctree-l4"><a class="reference internal" href="rst/intro_configuration.html#hostfile">hostfile</a></li>
+<li class="toctree-l4"><a class="reference internal" href="rst/intro_configuration.html#host-key-checking">host_key_checking</a></li>
+<li class="toctree-l4"><a class="reference internal" href="rst/intro_configuration.html#jinja2-extensions">jinja2_extensions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="rst/intro_configuration.html#legacy-playbook-variables">legacy_playbook_variables</a></li>
+<li class="toctree-l4"><a class="reference internal" href="rst/intro_configuration.html#library">library</a></li>
+<li class="toctree-l4"><a class="reference internal" href="rst/intro_configuration.html#log-path">log_path</a></li>
+<li class="toctree-l4"><a class="reference internal" href="rst/intro_configuration.html#lookup-plugins">lookup_plugins</a></li>
+<li class="toctree-l4"><a class="reference internal" href="rst/intro_configuration.html#module-lang">module_lang</a></li>
+<li class="toctree-l4"><a class="reference internal" href="rst/intro_configuration.html#module-name">module_name</a></li>
+<li class="toctree-l4"><a class="reference internal" href="rst/intro_configuration.html#nocolor">nocolor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="rst/intro_configuration.html#nocows">nocows</a></li>
+<li class="toctree-l4"><a class="reference internal" href="rst/intro_configuration.html#pattern">pattern</a></li>
+<li class="toctree-l4"><a class="reference internal" href="rst/intro_configuration.html#poll-interval">poll_interval</a></li>
+<li class="toctree-l4"><a class="reference internal" href="rst/intro_configuration.html#private-key-file">private_key_file</a></li>
+<li class="toctree-l4"><a class="reference internal" href="rst/intro_configuration.html#remote-port">remote_port</a></li>
+<li class="toctree-l4"><a class="reference internal" href="rst/intro_configuration.html#remote-tmp">remote_tmp</a></li>
+<li class="toctree-l4"><a class="reference internal" href="rst/intro_configuration.html#remote-user">remote_user</a></li>
+<li class="toctree-l4"><a class="reference internal" href="rst/intro_configuration.html#roles-path">roles_path</a></li>
+<li class="toctree-l4"><a class="reference internal" href="rst/intro_configuration.html#sudo-exe">sudo_exe</a></li>
+<li class="toctree-l4"><a class="reference internal" href="rst/intro_configuration.html#sudo-flags">sudo_flags</a></li>
+<li class="toctree-l4"><a class="reference internal" href="rst/intro_configuration.html#sudo-user">sudo_user</a></li>
+<li class="toctree-l4"><a class="reference internal" href="rst/intro_configuration.html#system-warnings">system_warnings</a></li>
+<li class="toctree-l4"><a class="reference internal" href="rst/intro_configuration.html#timeout">timeout</a></li>
+<li class="toctree-l4"><a class="reference internal" href="rst/intro_configuration.html#transport">transport</a></li>
+<li class="toctree-l4"><a class="reference internal" href="rst/intro_configuration.html#vars-plugins">vars_plugins</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="rst/intro_configuration.html#paramiko-specific-settings">Paramiko Specific Settings</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="rst/intro_configuration.html#record-host-keys">record_host_keys</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="rst/intro_configuration.html#openssh-specific-settings">OpenSSH Specific Settings</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="rst/intro_configuration.html#ssh-args">ssh_args</a></li>
+<li class="toctree-l4"><a class="reference internal" href="rst/intro_configuration.html#control-path">control_path</a></li>
+<li class="toctree-l4"><a class="reference internal" href="rst/intro_configuration.html#scp-if-ssh">scp_if_ssh</a></li>
+<li class="toctree-l4"><a class="reference internal" href="rst/intro_configuration.html#pipelining">pipelining</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="rst/intro_configuration.html#accelerate-mode-settings">Accelerate Mode Settings</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="rst/intro_configuration.html#accelerate-port">accelerate_port</a></li>
+<li class="toctree-l4"><a class="reference internal" href="rst/intro_configuration.html#accelerate-timeout">accelerate_timeout</a></li>
+<li class="toctree-l4"><a class="reference internal" href="rst/intro_configuration.html#accelerate-connect-timeout">accelerate_connect_timeout</a></li>
+<li class="toctree-l4"><a class="reference internal" href="rst/intro_configuration.html#accelerate-daemon-timeout">accelerate_daemon_timeout</a></li>
+<li class="toctree-l4"><a class="reference internal" href="rst/intro_configuration.html#accelerate-multi-key">accelerate_multi_key</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="rst/intro_dynamic_inventory.html">Dynamic Inventory</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="rst/intro_dynamic_inventory.html#example-the-cobbler-external-inventory-script">Example: The Cobbler External Inventory Script</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rst/intro_dynamic_inventory.html#example-aws-ec2-external-inventory-script">Example: AWS EC2 External Inventory Script</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rst/intro_dynamic_inventory.html#other-inventory-scripts">Other inventory scripts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rst/intro_dynamic_inventory.html#using-multiple-inventory-sources">Using Multiple Inventory Sources</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="rst/intro_getting_started.html">Getting Started</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="rst/intro_getting_started.html#foreword">Foreword</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rst/intro_getting_started.html#remote-connection-information">Remote Connection Information</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rst/intro_getting_started.html#your-first-commands">Your first commands</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rst/intro_getting_started.html#host-key-checking">Host Key Checking</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="rst/intro_installation.html">Installation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="rst/intro_installation.html#getting-ansible">Getting Ansible</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rst/intro_installation.html#basics-what-will-be-installed">Basics / What Will Be Installed</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rst/intro_installation.html#what-version-to-pick">What Version To Pick?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rst/intro_installation.html#control-machine-requirements">Control Machine Requirements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rst/intro_installation.html#managed-node-requirements">Managed Node Requirements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rst/intro_installation.html#installing-the-control-machine">Installing the Control Machine</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="rst/intro_installation.html#running-from-source">Running From Source</a></li>
+<li class="toctree-l3"><a class="reference internal" href="rst/intro_installation.html#latest-release-via-yum">Latest Release Via Yum</a></li>
+<li class="toctree-l3"><a class="reference internal" href="rst/intro_installation.html#latest-releases-via-apt-ubuntu">Latest Releases Via Apt (Ubuntu)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="rst/intro_installation.html#latest-releases-via-pkg-freebsd">Latest Releases Via pkg (FreeBSD)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="rst/intro_installation.html#latest-releases-via-homebrew-mac-osx">Latest Releases Via Homebrew (Mac OSX)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="rst/intro_installation.html#latest-releases-via-pip">Latest Releases Via Pip</a></li>
+<li class="toctree-l3"><a class="reference internal" href="rst/intro_installation.html#tarballs-of-tagged-releases">Tarballs of Tagged Releases</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="rst/intro_inventory.html">Inventory</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="rst/intro_inventory.html#hosts-and-groups">Hosts and Groups</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rst/intro_inventory.html#host-variables">Host Variables</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rst/intro_inventory.html#group-variables">Group Variables</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rst/intro_inventory.html#groups-of-groups-and-group-variables">Groups of Groups, and Group Variables</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rst/intro_inventory.html#splitting-out-host-and-group-specific-data">Splitting Out Host and Group Specific Data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rst/intro_inventory.html#list-of-behavioral-inventory-parameters">List of Behavioral Inventory Parameters</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="rst/intro_patterns.html">Patterns</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rst/intro_windows.html">Windows Support</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="rst/intro_windows.html#windows-how-does-it-work">Windows: How Does It Work</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rst/intro_windows.html#installing-on-the-control-machine">Installing on the Control Machine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rst/intro_windows.html#inventory">Inventory</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rst/intro_windows.html#windows-system-prep">Windows System Prep</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rst/intro_windows.html#getting-to-powershell-3-0-or-higher">Getting to Powershell 3.0 or higher</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rst/intro_windows.html#what-modules-are-available">What modules are available</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rst/intro_windows.html#developers-supported-modules-and-how-it-works">Developers: Supported modules and how it works</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rst/intro_windows.html#reminder-you-must-have-a-linux-control-machine">Reminder: You Must Have a Linux Control Machine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rst/intro_windows.html#windows-facts">Windows Facts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rst/intro_windows.html#windows-playbook-examples">Windows Playbook Examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rst/intro_windows.html#windows-contributions">Windows Contributions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="rst/modules.html">About Modules</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="rst/modules.html#introduction">Introduction</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="rst/playbooks.html">Playbooks</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="rst/playbooks_intro.html">Intro to Playbooks</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="rst/playbooks_intro.html#about-playbooks">About Playbooks</a></li>
+<li class="toctree-l3"><a class="reference internal" href="rst/playbooks_intro.html#playbook-language-example">Playbook Language Example</a></li>
+<li class="toctree-l3"><a class="reference internal" href="rst/playbooks_intro.html#basics">Basics</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="rst/playbooks_intro.html#hosts-and-users">Hosts and Users</a></li>
+<li class="toctree-l4"><a class="reference internal" href="rst/playbooks_intro.html#tasks-list">Tasks list</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="rst/playbooks_intro.html#action-shorthand">Action Shorthand</a></li>
+<li class="toctree-l3"><a class="reference internal" href="rst/playbooks_intro.html#handlers-running-operations-on-change">Handlers: Running Operations On Change</a></li>
+<li class="toctree-l3"><a class="reference internal" href="rst/playbooks_intro.html#executing-a-playbook">Executing A Playbook</a></li>
+<li class="toctree-l3"><a class="reference internal" href="rst/playbooks_intro.html#ansible-pull">Ansible-Pull</a></li>
+<li class="toctree-l3"><a class="reference internal" href="rst/playbooks_intro.html#tips-and-tricks">Tips and Tricks</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="rst/playbooks_roles.html">Playbook Roles and Include Statements</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="rst/playbooks_roles.html#introduction">Introduction</a></li>
+<li class="toctree-l3"><a class="reference internal" href="rst/playbooks_roles.html#task-include-files-and-encouraging-reuse">Task Include Files And Encouraging Reuse</a></li>
+<li class="toctree-l3"><a class="reference internal" href="rst/playbooks_roles.html#roles">Roles</a></li>
+<li class="toctree-l3"><a class="reference internal" href="rst/playbooks_roles.html#role-default-variables">Role Default Variables</a></li>
+<li class="toctree-l3"><a class="reference internal" href="rst/playbooks_roles.html#role-dependencies">Role Dependencies</a></li>
+<li class="toctree-l3"><a class="reference internal" href="rst/playbooks_roles.html#embedding-modules-in-roles">Embedding Modules In Roles</a></li>
+<li class="toctree-l3"><a class="reference internal" href="rst/playbooks_roles.html#ansible-galaxy">Ansible Galaxy</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="rst/playbooks_variables.html">Variables</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="rst/playbooks_variables.html#what-makes-a-valid-variable-name">What Makes A Valid Variable Name</a></li>
+<li class="toctree-l3"><a class="reference internal" href="rst/playbooks_variables.html#variables-defined-in-inventory">Variables Defined in Inventory</a></li>
+<li class="toctree-l3"><a class="reference internal" href="rst/playbooks_variables.html#variables-defined-in-a-playbook">Variables Defined in a Playbook</a></li>
+<li class="toctree-l3"><a class="reference internal" href="rst/playbooks_variables.html#variables-defined-from-included-files-and-roles">Variables defined from included files and roles</a></li>
+<li class="toctree-l3"><a class="reference internal" href="rst/playbooks_variables.html#using-variables-about-jinja2">Using Variables: About Jinja2</a></li>
+<li class="toctree-l3"><a class="reference internal" href="rst/playbooks_variables.html#jinja2-filters">Jinja2 Filters</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="rst/playbooks_variables.html#filters-for-formatting-data">Filters For Formatting Data</a></li>
+<li class="toctree-l4"><a class="reference internal" href="rst/playbooks_variables.html#filters-often-used-with-conditionals">Filters Often Used With Conditionals</a></li>
+<li class="toctree-l4"><a class="reference internal" href="rst/playbooks_variables.html#forcing-variables-to-be-defined">Forcing Variables To Be Defined</a></li>
+<li class="toctree-l4"><a class="reference internal" href="rst/playbooks_variables.html#defaulting-undefined-variables">Defaulting Undefined Variables</a></li>
+<li class="toctree-l4"><a class="reference internal" href="rst/playbooks_variables.html#set-theory-filters">Set Theory Filters</a></li>
+<li class="toctree-l4"><a class="reference internal" href="rst/playbooks_variables.html#version-comparison-filters">Version Comparison Filters</a></li>
+<li class="toctree-l4"><a class="reference internal" href="rst/playbooks_variables.html#random-number-filter">Random Number Filter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="rst/playbooks_variables.html#other-useful-filters">Other Useful Filters</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="rst/playbooks_variables.html#hey-wait-a-yaml-gotcha">Hey Wait, A YAML Gotcha</a></li>
+<li class="toctree-l3"><a class="reference internal" href="rst/playbooks_variables.html#information-discovered-from-systems-facts">Information discovered from systems: Facts</a></li>
+<li class="toctree-l3"><a class="reference internal" href="rst/playbooks_variables.html#turning-off-facts">Turning Off Facts</a></li>
+<li class="toctree-l3"><a class="reference internal" href="rst/playbooks_variables.html#local-facts-facts-d">Local Facts (Facts.d)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="rst/playbooks_variables.html#registered-variables">Registered Variables</a></li>
+<li class="toctree-l3"><a class="reference internal" href="rst/playbooks_variables.html#accessing-complex-variable-data">Accessing Complex Variable Data</a></li>
+<li class="toctree-l3"><a class="reference internal" href="rst/playbooks_variables.html#magic-variables-and-how-to-access-information-about-other-hosts">Magic Variables, and How To Access Information About Other Hosts</a></li>
+<li class="toctree-l3"><a class="reference internal" href="rst/playbooks_variables.html#variable-file-separation">Variable File Separation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="rst/playbooks_variables.html#passing-variables-on-the-command-line">Passing Variables On The Command Line</a></li>
+<li class="toctree-l3"><a class="reference internal" href="rst/playbooks_variables.html#conditional-imports">Conditional Imports</a></li>
+<li class="toctree-l3"><a class="reference internal" href="rst/playbooks_variables.html#variable-precedence-where-should-i-put-a-variable">Variable Precedence: Where Should I Put A Variable?</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="rst/playbooks_conditionals.html">Conditionals</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="rst/playbooks_conditionals.html#the-when-statement">The When Statement</a></li>
+<li class="toctree-l3"><a class="reference internal" href="rst/playbooks_conditionals.html#loading-in-custom-facts">Loading in Custom Facts</a></li>
+<li class="toctree-l3"><a class="reference internal" href="rst/playbooks_conditionals.html#applying-when-to-roles-and-includes">Applying &#8216;when&#8217; to roles and includes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="rst/playbooks_conditionals.html#conditional-imports">Conditional Imports</a></li>
+<li class="toctree-l3"><a class="reference internal" href="rst/playbooks_conditionals.html#selecting-files-and-templates-based-on-variables">Selecting Files And Templates Based On Variables</a></li>
+<li class="toctree-l3"><a class="reference internal" href="rst/playbooks_conditionals.html#register-variables">Register Variables</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="rst/playbooks_loops.html">Loops</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="rst/playbooks_loops.html#standard-loops">Standard Loops</a></li>
+<li class="toctree-l3"><a class="reference internal" href="rst/playbooks_loops.html#nested-loops">Nested Loops</a></li>
+<li class="toctree-l3"><a class="reference internal" href="rst/playbooks_loops.html#looping-over-hashes">Looping over Hashes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="rst/playbooks_loops.html#looping-over-fileglobs">Looping over Fileglobs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="rst/playbooks_loops.html#looping-over-parallel-sets-of-data">Looping over Parallel Sets of Data</a></li>
+<li class="toctree-l3"><a class="reference internal" href="rst/playbooks_loops.html#looping-over-subelements">Looping over Subelements</a></li>
+<li class="toctree-l3"><a class="reference internal" href="rst/playbooks_loops.html#looping-over-integer-sequences">Looping over Integer Sequences</a></li>
+<li class="toctree-l3"><a class="reference internal" href="rst/playbooks_loops.html#random-choices">Random Choices</a></li>
+<li class="toctree-l3"><a class="reference internal" href="rst/playbooks_loops.html#do-until-loops">Do-Until Loops</a></li>
+<li class="toctree-l3"><a class="reference internal" href="rst/playbooks_loops.html#finding-first-matched-files">Finding First Matched Files</a></li>
+<li class="toctree-l3"><a class="reference internal" href="rst/playbooks_loops.html#iterating-over-the-results-of-a-program-execution">Iterating Over The Results of a Program Execution</a></li>
+<li class="toctree-l3"><a class="reference internal" href="rst/playbooks_loops.html#looping-over-a-list-with-an-index">Looping Over A List With An Index</a></li>
+<li class="toctree-l3"><a class="reference internal" href="rst/playbooks_loops.html#flattening-a-list">Flattening A List</a></li>
+<li class="toctree-l3"><a class="reference internal" href="rst/playbooks_loops.html#using-register-with-a-loop">Using register with a loop</a></li>
+<li class="toctree-l3"><a class="reference internal" href="rst/playbooks_loops.html#writing-your-own-iterators">Writing Your Own Iterators</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="rst/playbooks_best_practices.html">Best Practices</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="rst/playbooks_best_practices.html#content-organization">Content Organization</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="rst/playbooks_best_practices.html#directory-layout">Directory Layout</a></li>
+<li class="toctree-l4"><a class="reference internal" href="rst/playbooks_best_practices.html#how-to-arrange-inventory-stage-vs-production">How to Arrange Inventory, Stage vs Production</a></li>
+<li class="toctree-l4"><a class="reference internal" href="rst/playbooks_best_practices.html#group-and-host-variables">Group And Host Variables</a></li>
+<li class="toctree-l4"><a class="reference internal" href="rst/playbooks_best_practices.html#top-level-playbooks-are-separated-by-role">Top Level Playbooks Are Separated By Role</a></li>
+<li class="toctree-l4"><a class="reference internal" href="rst/playbooks_best_practices.html#task-and-handler-organization-for-a-role">Task And Handler Organization For A Role</a></li>
+<li class="toctree-l4"><a class="reference internal" href="rst/playbooks_best_practices.html#what-this-organization-enables-examples">What This Organization Enables (Examples)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="rst/playbooks_best_practices.html#deployment-vs-configuration-organization">Deployment vs Configuration Organization</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="rst/playbooks_best_practices.html#stage-vs-production">Stage vs Production</a></li>
+<li class="toctree-l3"><a class="reference internal" href="rst/playbooks_best_practices.html#rolling-updates">Rolling Updates</a></li>
+<li class="toctree-l3"><a class="reference internal" href="rst/playbooks_best_practices.html#always-mention-the-state">Always Mention The State</a></li>
+<li class="toctree-l3"><a class="reference internal" href="rst/playbooks_best_practices.html#group-by-roles">Group By Roles</a></li>
+<li class="toctree-l3"><a class="reference internal" href="rst/playbooks_best_practices.html#operating-system-and-distribution-variance">Operating System and Distribution Variance</a></li>
+<li class="toctree-l3"><a class="reference internal" href="rst/playbooks_best_practices.html#bundling-ansible-modules-with-playbooks">Bundling Ansible Modules With Playbooks</a></li>
+<li class="toctree-l3"><a class="reference internal" href="rst/playbooks_best_practices.html#whitespace-and-comments">Whitespace and Comments</a></li>
+<li class="toctree-l3"><a class="reference internal" href="rst/playbooks_best_practices.html#always-name-tasks">Always Name Tasks</a></li>
+<li class="toctree-l3"><a class="reference internal" href="rst/playbooks_best_practices.html#keep-it-simple">Keep It Simple</a></li>
+<li class="toctree-l3"><a class="reference internal" href="rst/playbooks_best_practices.html#version-control">Version Control</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="rst/playbooks_acceleration.html">Accelerated Mode</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="rst/playbooks_acceleration.html#you-might-not-need-this">You Might Not Need This!</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rst/playbooks_acceleration.html#accelerate-mode-details">Accelerate Mode Details</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="rst/playbooks_async.html">Asynchronous Actions and Polling</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rst/playbooks_best_practices.html">Best Practices</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="rst/playbooks_best_practices.html#content-organization">Content Organization</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="rst/playbooks_best_practices.html#directory-layout">Directory Layout</a></li>
+<li class="toctree-l3"><a class="reference internal" href="rst/playbooks_best_practices.html#how-to-arrange-inventory-stage-vs-production">How to Arrange Inventory, Stage vs Production</a></li>
+<li class="toctree-l3"><a class="reference internal" href="rst/playbooks_best_practices.html#group-and-host-variables">Group And Host Variables</a></li>
+<li class="toctree-l3"><a class="reference internal" href="rst/playbooks_best_practices.html#top-level-playbooks-are-separated-by-role">Top Level Playbooks Are Separated By Role</a></li>
+<li class="toctree-l3"><a class="reference internal" href="rst/playbooks_best_practices.html#task-and-handler-organization-for-a-role">Task And Handler Organization For A Role</a></li>
+<li class="toctree-l3"><a class="reference internal" href="rst/playbooks_best_practices.html#what-this-organization-enables-examples">What This Organization Enables (Examples)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="rst/playbooks_best_practices.html#deployment-vs-configuration-organization">Deployment vs Configuration Organization</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="rst/playbooks_best_practices.html#stage-vs-production">Stage vs Production</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rst/playbooks_best_practices.html#rolling-updates">Rolling Updates</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rst/playbooks_best_practices.html#always-mention-the-state">Always Mention The State</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rst/playbooks_best_practices.html#group-by-roles">Group By Roles</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rst/playbooks_best_practices.html#operating-system-and-distribution-variance">Operating System and Distribution Variance</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rst/playbooks_best_practices.html#bundling-ansible-modules-with-playbooks">Bundling Ansible Modules With Playbooks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rst/playbooks_best_practices.html#whitespace-and-comments">Whitespace and Comments</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rst/playbooks_best_practices.html#always-name-tasks">Always Name Tasks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rst/playbooks_best_practices.html#keep-it-simple">Keep It Simple</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rst/playbooks_best_practices.html#version-control">Version Control</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="rst/playbooks_checkmode.html">Check Mode (&#8220;Dry Run&#8221;)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="rst/playbooks_checkmode.html#running-a-task-in-check-mode">Running a task in check mode</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rst/playbooks_checkmode.html#showing-differences-with-diff">Showing Differences with <tt class="docutils literal"><span class="pre">--diff</span></tt></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="rst/playbooks_conditionals.html">Conditionals</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="rst/playbooks_conditionals.html#the-when-statement">The When Statement</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rst/playbooks_conditionals.html#loading-in-custom-facts">Loading in Custom Facts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rst/playbooks_conditionals.html#applying-when-to-roles-and-includes">Applying &#8216;when&#8217; to roles and includes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rst/playbooks_conditionals.html#conditional-imports">Conditional Imports</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rst/playbooks_conditionals.html#selecting-files-and-templates-based-on-variables">Selecting Files And Templates Based On Variables</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rst/playbooks_conditionals.html#register-variables">Register Variables</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="rst/playbooks_delegation.html">Delegation, Rolling Updates, and Local Actions</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="rst/playbooks_delegation.html#rolling-update-batch-size">Rolling Update Batch Size</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rst/playbooks_delegation.html#maximum-failure-percentage">Maximum Failure Percentage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rst/playbooks_delegation.html#delegation">Delegation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rst/playbooks_delegation.html#run-once">Run Once</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rst/playbooks_delegation.html#local-playbooks">Local Playbooks</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="rst/playbooks_environment.html">Setting the Environment (and Working With Proxies)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rst/playbooks_error_handling.html">Error Handling In Playbooks</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="rst/playbooks_error_handling.html#ignoring-failed-commands">Ignoring Failed Commands</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rst/playbooks_error_handling.html#controlling-what-defines-failure">Controlling What Defines Failure</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rst/playbooks_error_handling.html#overriding-the-changed-result">Overriding The Changed Result</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="rst/playbooks_intro.html">Intro to Playbooks</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="rst/playbooks_intro.html#about-playbooks">About Playbooks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rst/playbooks_intro.html#playbook-language-example">Playbook Language Example</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rst/playbooks_intro.html#basics">Basics</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="rst/playbooks_intro.html#hosts-and-users">Hosts and Users</a></li>
+<li class="toctree-l3"><a class="reference internal" href="rst/playbooks_intro.html#tasks-list">Tasks list</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="rst/playbooks_intro.html#action-shorthand">Action Shorthand</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rst/playbooks_intro.html#handlers-running-operations-on-change">Handlers: Running Operations On Change</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rst/playbooks_intro.html#executing-a-playbook">Executing A Playbook</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rst/playbooks_intro.html#ansible-pull">Ansible-Pull</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rst/playbooks_intro.html#tips-and-tricks">Tips and Tricks</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="rst/playbooks_lookups.html">Using Lookups</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="rst/playbooks_lookups.html#intro-to-lookups-getting-file-contents">Intro to Lookups: Getting File Contents</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rst/playbooks_lookups.html#the-password-lookup">The Password Lookup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rst/playbooks_lookups.html#more-lookups">More Lookups</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="rst/playbooks_loops.html">Loops</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="rst/playbooks_loops.html#standard-loops">Standard Loops</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rst/playbooks_loops.html#nested-loops">Nested Loops</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rst/playbooks_loops.html#looping-over-hashes">Looping over Hashes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rst/playbooks_loops.html#looping-over-fileglobs">Looping over Fileglobs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rst/playbooks_loops.html#looping-over-parallel-sets-of-data">Looping over Parallel Sets of Data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rst/playbooks_loops.html#looping-over-subelements">Looping over Subelements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rst/playbooks_loops.html#looping-over-integer-sequences">Looping over Integer Sequences</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rst/playbooks_loops.html#random-choices">Random Choices</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rst/playbooks_loops.html#do-until-loops">Do-Until Loops</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rst/playbooks_loops.html#finding-first-matched-files">Finding First Matched Files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rst/playbooks_loops.html#iterating-over-the-results-of-a-program-execution">Iterating Over The Results of a Program Execution</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rst/playbooks_loops.html#looping-over-a-list-with-an-index">Looping Over A List With An Index</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rst/playbooks_loops.html#flattening-a-list">Flattening A List</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rst/playbooks_loops.html#using-register-with-a-loop">Using register with a loop</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rst/playbooks_loops.html#writing-your-own-iterators">Writing Your Own Iterators</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="rst/playbooks_prompts.html">Prompts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rst/playbooks_roles.html">Playbook Roles and Include Statements</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="rst/playbooks_roles.html#introduction">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rst/playbooks_roles.html#task-include-files-and-encouraging-reuse">Task Include Files And Encouraging Reuse</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rst/playbooks_roles.html#roles">Roles</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rst/playbooks_roles.html#role-default-variables">Role Default Variables</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rst/playbooks_roles.html#role-dependencies">Role Dependencies</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rst/playbooks_roles.html#embedding-modules-in-roles">Embedding Modules In Roles</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rst/playbooks_roles.html#ansible-galaxy">Ansible Galaxy</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="rst/playbooks_special_topics.html">Playbooks: Special Topics</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="rst/playbooks_acceleration.html">Accelerated Mode</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="rst/playbooks_acceleration.html#you-might-not-need-this">You Might Not Need This!</a></li>
+<li class="toctree-l3"><a class="reference internal" href="rst/playbooks_acceleration.html#accelerate-mode-details">Accelerate Mode Details</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="rst/playbooks_async.html">Asynchronous Actions and Polling</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rst/playbooks_checkmode.html">Check Mode (&#8220;Dry Run&#8221;)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="rst/playbooks_checkmode.html#running-a-task-in-check-mode">Running a task in check mode</a></li>
+<li class="toctree-l3"><a class="reference internal" href="rst/playbooks_checkmode.html#showing-differences-with-diff">Showing Differences with <tt class="docutils literal"><span class="pre">--diff</span></tt></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="rst/playbooks_delegation.html">Delegation, Rolling Updates, and Local Actions</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="rst/playbooks_delegation.html#rolling-update-batch-size">Rolling Update Batch Size</a></li>
+<li class="toctree-l3"><a class="reference internal" href="rst/playbooks_delegation.html#maximum-failure-percentage">Maximum Failure Percentage</a></li>
+<li class="toctree-l3"><a class="reference internal" href="rst/playbooks_delegation.html#delegation">Delegation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="rst/playbooks_delegation.html#run-once">Run Once</a></li>
+<li class="toctree-l3"><a class="reference internal" href="rst/playbooks_delegation.html#local-playbooks">Local Playbooks</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="rst/playbooks_environment.html">Setting the Environment (and Working With Proxies)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rst/playbooks_error_handling.html">Error Handling In Playbooks</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="rst/playbooks_error_handling.html#ignoring-failed-commands">Ignoring Failed Commands</a></li>
+<li class="toctree-l3"><a class="reference internal" href="rst/playbooks_error_handling.html#controlling-what-defines-failure">Controlling What Defines Failure</a></li>
+<li class="toctree-l3"><a class="reference internal" href="rst/playbooks_error_handling.html#overriding-the-changed-result">Overriding The Changed Result</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="rst/playbooks_lookups.html">Using Lookups</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="rst/playbooks_lookups.html#intro-to-lookups-getting-file-contents">Intro to Lookups: Getting File Contents</a></li>
+<li class="toctree-l3"><a class="reference internal" href="rst/playbooks_lookups.html#the-password-lookup">The Password Lookup</a></li>
+<li class="toctree-l3"><a class="reference internal" href="rst/playbooks_lookups.html#more-lookups">More Lookups</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="rst/playbooks_prompts.html">Prompts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rst/playbooks_tags.html">Tags</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rst/playbooks_vault.html">Vault</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="rst/playbooks_vault.html#what-can-be-encrypted-with-vault">What Can Be Encrypted With Vault</a></li>
+<li class="toctree-l3"><a class="reference internal" href="rst/playbooks_vault.html#creating-encrypted-files">Creating Encrypted Files</a></li>
+<li class="toctree-l3"><a class="reference internal" href="rst/playbooks_vault.html#editing-encrypted-files">Editing Encrypted Files</a></li>
+<li class="toctree-l3"><a class="reference internal" href="rst/playbooks_vault.html#rekeying-encrypted-files">Rekeying Encrypted Files</a></li>
+<li class="toctree-l3"><a class="reference internal" href="rst/playbooks_vault.html#encrypting-unencrypted-files">Encrypting Unencrypted Files</a></li>
+<li class="toctree-l3"><a class="reference internal" href="rst/playbooks_vault.html#decrypting-encrypted-files">Decrypting Encrypted Files</a></li>
+<li class="toctree-l3"><a class="reference internal" href="rst/playbooks_vault.html#running-a-playbook-with-vault">Running a Playbook With Vault</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="rst/playbooks_tags.html">Tags</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rst/playbooks_variables.html">Variables</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="rst/playbooks_variables.html#what-makes-a-valid-variable-name">What Makes A Valid Variable Name</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rst/playbooks_variables.html#variables-defined-in-inventory">Variables Defined in Inventory</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rst/playbooks_variables.html#variables-defined-in-a-playbook">Variables Defined in a Playbook</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rst/playbooks_variables.html#variables-defined-from-included-files-and-roles">Variables defined from included files and roles</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rst/playbooks_variables.html#using-variables-about-jinja2">Using Variables: About Jinja2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rst/playbooks_variables.html#jinja2-filters">Jinja2 Filters</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="rst/playbooks_variables.html#filters-for-formatting-data">Filters For Formatting Data</a></li>
+<li class="toctree-l3"><a class="reference internal" href="rst/playbooks_variables.html#filters-often-used-with-conditionals">Filters Often Used With Conditionals</a></li>
+<li class="toctree-l3"><a class="reference internal" href="rst/playbooks_variables.html#forcing-variables-to-be-defined">Forcing Variables To Be Defined</a></li>
+<li class="toctree-l3"><a class="reference internal" href="rst/playbooks_variables.html#defaulting-undefined-variables">Defaulting Undefined Variables</a></li>
+<li class="toctree-l3"><a class="reference internal" href="rst/playbooks_variables.html#set-theory-filters">Set Theory Filters</a></li>
+<li class="toctree-l3"><a class="reference internal" href="rst/playbooks_variables.html#version-comparison-filters">Version Comparison Filters</a></li>
+<li class="toctree-l3"><a class="reference internal" href="rst/playbooks_variables.html#random-number-filter">Random Number Filter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="rst/playbooks_variables.html#other-useful-filters">Other Useful Filters</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="rst/playbooks_variables.html#hey-wait-a-yaml-gotcha">Hey Wait, A YAML Gotcha</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rst/playbooks_variables.html#information-discovered-from-systems-facts">Information discovered from systems: Facts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rst/playbooks_variables.html#turning-off-facts">Turning Off Facts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rst/playbooks_variables.html#local-facts-facts-d">Local Facts (Facts.d)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rst/playbooks_variables.html#registered-variables">Registered Variables</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rst/playbooks_variables.html#accessing-complex-variable-data">Accessing Complex Variable Data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rst/playbooks_variables.html#magic-variables-and-how-to-access-information-about-other-hosts">Magic Variables, and How To Access Information About Other Hosts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rst/playbooks_variables.html#variable-file-separation">Variable File Separation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rst/playbooks_variables.html#passing-variables-on-the-command-line">Passing Variables On The Command Line</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rst/playbooks_variables.html#conditional-imports">Conditional Imports</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rst/playbooks_variables.html#variable-precedence-where-should-i-put-a-variable">Variable Precedence: Where Should I Put A Variable?</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="rst/playbooks_vault.html">Vault</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="rst/playbooks_vault.html#what-can-be-encrypted-with-vault">What Can Be Encrypted With Vault</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rst/playbooks_vault.html#creating-encrypted-files">Creating Encrypted Files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rst/playbooks_vault.html#editing-encrypted-files">Editing Encrypted Files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rst/playbooks_vault.html#rekeying-encrypted-files">Rekeying Encrypted Files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rst/playbooks_vault.html#encrypting-unencrypted-files">Encrypting Unencrypted Files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rst/playbooks_vault.html#decrypting-encrypted-files">Decrypting Encrypted Files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rst/playbooks_vault.html#running-a-playbook-with-vault">Running a Playbook With Vault</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="rst/quickstart.html">Quickstart Video</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rst/test_strategies.html">Testing Strategies</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="rst/test_strategies.html#integrating-testing-with-ansible-playbooks">Integrating Testing With Ansible Playbooks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rst/test_strategies.html#the-right-level-of-testing">The Right Level of Testing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rst/test_strategies.html#check-mode-as-a-drift-test">Check Mode As A Drift Test</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rst/test_strategies.html#modules-that-are-useful-for-testing">Modules That Are Useful for Testing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rst/test_strategies.html#testing-lifecycle">Testing Lifecycle</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rst/test_strategies.html#integrating-testing-with-rolling-updates">Integrating Testing With Rolling Updates</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rst/test_strategies.html#achieving-continous-deployment">Achieving Continous Deployment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rst/test_strategies.html#conclusion">Conclusion</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="rst/tower.html">Ansible Tower</a></li>
+</ul>
+</div>
+</div>
+<div class="section" id="indices-and-tables">
+<h1>Indices and tables<a class="headerlink" href="#indices-and-tables" title="Permalink to this headline">¶</a></h1>
+<ul class="simple">
+<li><a class="reference internal" href="genindex.html"><em>Index</em></a></li>
+<li><a class="reference internal" href="py-modindex.html"><em>Module Index</em></a></li>
+<li><a class="reference internal" href="search.html"><em>Search Page</em></a></li>
+</ul>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="#">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Welcome to deployer&#8217;s documentation!</a></li>
+<li><a class="reference internal" href="#indices-and-tables">Indices and tables</a></li>
+</ul>
+
+  <h4>Next topic</h4>
+  <p class="topless"><a href="rst/YAMLSyntax.html"
+                        title="next chapter">YAML Syntax</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="_sources/index.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="rst/YAMLSyntax.html" title="YAML Syntax"
+             >next</a> |</li>
+        <li><a href="#">deployer 1 documentation</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2014, bmc.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.2.
+    </div>
+  </body>
+</html>

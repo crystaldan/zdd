@@ -1,0 +1,6 @@
+*.pyc
+.log
+.status
+.stat
+.progress
+.prog

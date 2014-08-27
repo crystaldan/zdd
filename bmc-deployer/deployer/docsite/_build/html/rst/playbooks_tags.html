@@ -1,0 +1,159 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Tags &mdash; deployer 1 documentation</title>
+    
+    <link rel="stylesheet" href="../_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <link rel="top" title="deployer 1 documentation" href="../index.html" />
+    <link rel="next" title="Variables" href="playbooks_variables.html" />
+    <link rel="prev" title="Vault" href="playbooks_vault.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="playbooks_variables.html" title="Variables"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="playbooks_vault.html" title="Vault"
+             accesskey="P">previous</a> |</li>
+        <li><a href="../index.html">deployer 1 documentation</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="tags">
+<h1>Tags<a class="headerlink" href="#tags" title="Permalink to this headline">¶</a></h1>
+<p>If you have a large playbook it may become useful to be able to run a
+specific part of the configuration without running the whole playbook.</p>
+<p>Both plays and tasks support a &#8220;tags:&#8221; attribute for this reason.</p>
+<p>Example:</p>
+<div class="highlight-python"><div class="highlight"><pre>tasks:
+
+    - yum: name={{ item }} state=installed
+      with_items:
+         - httpd
+         - memcached
+      tags:
+         - packages
+
+    - template: src=templates/src.j2 dest=/etc/foo.conf
+      tags:
+         - configuration
+</pre></div>
+</div>
+<p>If you wanted to just run the &#8220;configuration&#8221; and &#8220;packages&#8221; part of a very long playbook, you could do this:</p>
+<div class="highlight-python"><div class="highlight"><pre>ansible-playbook example.yml --tags &quot;configuration,packages&quot;
+</pre></div>
+</div>
+<p>On the other hand, if you want to run a playbook <em>without</em> certain tasks, you could do this:</p>
+<div class="highlight-python"><div class="highlight"><pre>ansible-playbook example.yml --skip-tags &quot;notification&quot;
+</pre></div>
+</div>
+<p>You may also apply tags to roles:</p>
+<div class="highlight-python"><div class="highlight"><pre>roles:
+  - { role: webserver, port: 5000, tags: [ &#39;web&#39;, &#39;foo&#39; ] }
+</pre></div>
+</div>
+<p>And you may also tag basic include statements:</p>
+<div class="highlight-python"><div class="highlight"><pre>- include: foo.yml tags=web,foo
+</pre></div>
+</div>
+<p>Both of these have the function of tagging every single task inside the include statement.</p>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<dl class="last docutils">
+<dt><a class="reference internal" href="playbooks.html"><em>Playbooks</em></a></dt>
+<dd>An introduction to playbooks</dd>
+<dt><a class="reference internal" href="playbooks_roles.html"><em>Playbook Roles and Include Statements</em></a></dt>
+<dd>Playbook organization by roles</dd>
+<dt><a class="reference external" href="http://groups.google.com/group/ansible-devel">User Mailing List</a></dt>
+<dd>Have a question?  Stop by the google group!</dd>
+<dt><a class="reference external" href="http://irc.freenode.net">irc.freenode.net</a></dt>
+<dd>#ansible IRC chat channel</dd>
+</dl>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="playbooks_vault.html"
+                        title="previous chapter">Vault</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="playbooks_variables.html"
+                        title="next chapter">Variables</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="../_sources/rst/playbooks_tags.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="playbooks_variables.html" title="Variables"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="playbooks_vault.html" title="Vault"
+             >previous</a> |</li>
+        <li><a href="../index.html">deployer 1 documentation</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2014, bmc.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.2.
+    </div>
+  </body>
+</html>
